@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------------
+    ティザー
+------------------------------------------------------------------------*/
+@use "../../global" as g;
+
+.bl_teaser {
+    img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        object-position: right bottom;
+        
+        @include g.mq('md') {
+            object-position: left bottom;
+        }
+    }
+}

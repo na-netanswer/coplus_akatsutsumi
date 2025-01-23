@@ -1,0 +1,53 @@
+/*------------------------------------------------------------------------
+    TOPに戻る
+------------------------------------------------------------------------*/
+@use "../../global" as g;
+
+.el_gotop {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	visibility: hidden;
+	opacity: 0;
+    text-align: center;
+	z-index: map-get(g.$z-index, 'gotop');
+    transition: 0.4s;
+	
+	@include g.mq('md') {
+		right: 50px;
+		bottom: 50px;	
+	}
+
+	&.is_show {
+		visibility: visible;
+		opacity: 1;
+	}
+	
+	a {
+		position: relative;
+		display: block;
+		width: 50px;
+		height: 50px;
+		background-color: g.color('key');
+		border-radius: 50%;
+		
+		@include g.mq('md') {
+			width: 60px;
+			height: 60px;		
+		}
+	}
+	
+	&_arrow {
+		@include g.arrow("top", 1.8rem, 4px, #fff, true);
+		position: absolute;
+		top: 6px;
+		right : 0;
+		bottom : 0;
+		left: 0;
+		margin: auto;
+		
+		@include g.mq('md') {
+			@include g.arrow("top", 2.1rem, 5px, #fff, true);
+		}
+	}
+}

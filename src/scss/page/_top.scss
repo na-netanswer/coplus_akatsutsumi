@@ -1,0 +1,704 @@
+/**************************************************************************
+    トップページ
+**************************************************************************/
+@use "../global" as g;
+
+#top {
+    .bl_mv{
+        img{
+            width: 100%;
+        }
+    }
+
+    .bl_about {
+        padding: 70px 0 0;
+
+        @include g.mq('md') {
+            padding: 130px 0 100px;
+        }
+
+        &_box{
+            margin-bottom: 90px;
+            
+            @include g.mq('md') {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                margin-bottom: 140px;
+            }
+        }
+
+        &_txtbox{
+            margin-bottom: 50px;
+            
+            @include g.mq('md') {
+                margin-bottom: 0;
+            }
+        }
+
+        &_title{
+            margin-bottom: 40px;
+            
+            @include g.mq('md') {
+                margin-top: 100px;
+                margin-bottom: 60px;
+            }
+        }
+
+        &_txt{
+            line-height: 2.286;
+        }
+
+        &_imgbox{
+            text-align: center;
+            
+            @include g.mq('md') {
+                flex: 0 0 auto;
+                width: g.scale_tab(540);
+            }
+        }
+
+        &_point{
+            &_title{
+                font-size: 2.0rem;
+                text-align: center;
+                margin-bottom: 20px;
+                font-weight: normal;
+            }
+
+            &_list{
+                @include g.mq('sm') {
+                    width: 100vw;
+                    margin: 0 calc(50% - 50vw);
+                }
+                @include g.mq('md') {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 5px;
+                }
+            }
+
+            &_item{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .bl_location{
+        padding: 70px 0 50px;
+        
+        @include g.mq('md') {
+            padding: 100px 0 185px;
+        }
+
+        &_head{
+            img{
+                width: 100%;
+            }
+        }
+
+        &_title{
+            margin-bottom: 30px;
+            
+            @include g.mq('md') {
+                margin-bottom: 60px;
+            }
+        }
+
+        &_box{
+            position: relative;
+        }
+
+        &_txt{
+            margin-bottom: 35px;
+            line-height: 2.286;
+            
+            @include g.mq('md') {
+                position: absolute;
+                top: 0;
+                left: 0;
+                max-width: 520px;
+                margin-bottom: 0;
+            }
+        }
+
+        &_imgbox{
+            text-align: center;
+        }
+
+        &_map{
+            margin-bottom: 50px;
+            
+            @include g.mq('md') {
+                margin-bottom: 100px;
+            }
+        }
+
+        &_list{
+           display: flex;
+           flex-direction: column;
+           gap: 15px;
+           margin-bottom: 40px;
+
+           @include g.mq('md') {
+            margin-bottom: 110px;
+           }
+        }
+
+        &_item{
+            @include g.mq('md') {
+                display: flex;
+            }
+
+            &_imgbox{
+                flex: 0 0 auto;
+
+                img{
+                    @include g.mq('sm') {
+                        width: 100%;
+                    }
+
+                    @include g.mq('md') {
+                        object-fit: cover;
+                        height: 100%;
+                    }
+                }
+            }
+
+            &_txtbox{
+                width: 100%;
+                padding: 30px;
+                background-color: #FFF;
+                
+                @include g.mq('md') {
+                    padding: 45px 50px 35px;
+                }
+            }
+            
+            &_numbox{
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            &_num{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 27px;
+                height: 27px;
+                font-size: 1.5rem;
+                border-bottom: 1px solid g.color('key');
+                border-right: 1px solid g.color('key');
+                margin-right: 20px;
+                
+                @include g.mq('md') {
+                    width: 41px;
+                    height: 41px;
+                    margin-right: 40px;
+                    font-size: 2.4rem;
+                }
+            }
+
+            &_tit{
+                font-size: 1.8rem;
+                
+                @include g.mq('md') {
+                    font-size: 2.0rem;
+                }
+            }
+
+            &_txt{
+                line-height: 2;
+                font-family: g.font('yugo');
+                
+                @include g.mq('md') {
+                    margin-left: 80px;
+                }
+            }
+        }
+    }
+
+    .bl_slide{
+        &_inner{
+            position: relative;
+        }
+        &_item{
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    .bl_facility{
+        padding: 75px 0;
+        
+        @include g.mq('md') {
+            padding: 120px 0 150px;
+        }
+
+        &_title{
+            margin-bottom: 50px;
+            
+            @include g.mq('md') {
+                margin-bottom: 0;
+            }
+        }
+
+        &_box{
+            display: flex;
+            flex-direction: column-reverse;
+            margin-bottom: 45px;
+            gap: 35px;
+            
+            @include g.mq('md') {
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between;
+                gap: 40px;
+                margin-bottom: 90px;
+            }
+        }
+
+        &_txtbox{
+            @include g.mq('md') {
+                max-width: 240px;
+            }
+        }
+        &_unit{
+            @include g.mq('sm') {
+                display: flex;
+            }
+        }
+
+        &_main{
+            position: relative;
+            margin-bottom: 20px;
+
+            &:not(:last-child){
+                @include g.mq('sm') {
+                    margin-right: 20px;
+                    padding-right: 20px;
+                    border-right: 1px solid g.color('key');
+                }
+
+                &::after{
+                    @include g.mq('md') {
+                        content: '';
+                        display: block;
+                        width: 50px;
+                        height: 1px;
+                        margin-top: 20px;
+                        background-color: g.color('key');
+                    }
+                }
+            }
+
+            dt{
+                font-size: 1.2rem;
+                font-family: g.font('yugo');
+            }
+            dd{
+                font-size: 2.4rem;
+                line-height: 1.4;
+                
+                @include g.mq('md') {
+                    font-size: 2.8rem;
+                }
+
+                span{
+                    font-size: 1.7rem;
+                }
+            }
+        }
+
+        &_sub{
+            @include g.mq('sm') {
+                display: flex;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            &_list{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 4px;
+
+                @include g.mq('md') {
+                    flex-direction: row;
+                    margin-bottom: 4px;
+                }
+            }
+            &_item{
+                font-size: 1.2rem;
+                padding: 2px 15px;
+                background-color: g.color('key');
+                color: #FFF;
+                white-space: nowrap;
+                text-align: center;
+                
+                @include g.mq('md') {
+                    padding-top: 5px;
+                    font-size: 1.3rem;
+                }
+                
+                span{
+                    font-size: 1.6rem;
+                    display: inline-block;
+                    padding: 0 2px;
+                    
+                    @include g.mq('md') {
+                        font-size: 1.7rem;
+                    }
+                }
+
+                &.is-big{
+                    font-size: 1.6rem;
+                    padding: 3px 15px;
+
+                    @include g.mq('md') {
+                        padding-top: 0;
+                    }
+
+                    span{
+                        font-size: 2.1rem;
+                    }
+                }
+            }
+            &_s-list{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px;
+            }
+            &_s-item{
+                font-size: 1.0rem;
+                padding: 2px 4px;
+                border: 1px solid g.color('key');
+                font-family: g.font('yugo');
+                letter-spacing: -0.1em;
+                
+                @include g.mq('md') {
+                    letter-spacing: -0.05em;
+                }
+            }
+        }
+    }
+
+    .bl_system{
+        padding: 75px 0;
+        
+        @include g.mq('md') {
+            padding: 120px 0 80px;
+        }
+
+        &_box{
+            @include g.mq('md') {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+            }
+        }
+
+        &_txtbox{
+            margin-bottom: 35px;
+
+            @include g.mq('md') {
+                display: flex;
+                flex-direction: column;
+                max-width: 300px;
+                margin-bottom: 0;
+            }
+        }
+
+        &_title{
+            margin-bottom: 45px;
+            color: #FFF;
+            
+            @include g.mq('md') {
+                margin-bottom: 0;
+                flex-grow: 1;
+            }
+        }
+
+        &_subtit{
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            color: #FFF;
+        }
+
+        &_txt{
+            color: #FFF;
+            line-height: 2.571;
+        }
+
+        &_list{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+            width: 100%;
+            max-width: 636px;
+        }
+
+        &_item{
+            background-color: #FFF;
+            padding: 30px 0 15px;
+            text-align: center;
+            
+            @include g.mq('md') {
+                padding: 35px 0;
+            }
+
+            &_imgbox{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 41px;
+                margin-bottom: 20px;
+                
+                @include g.mq('md') {
+                    min-height: 80px;
+                }
+            }
+
+            &_txt{
+                text-align: center;
+                font-family: g.font('yugo');
+                
+                @include g.mq('sm') {
+                    font-size: 1.2rem;
+                }
+
+                sup{
+                    font-size: 1.0rem;
+                }
+            }
+
+            &:nth-of-type(1){
+                img{
+                    @include g.mq('sm') {
+                        width: 36px;
+                    }
+                }
+            }
+            &:nth-of-type(2){
+                img{
+                    @include g.mq('sm') {
+                        width: 41px;
+                    }
+                }
+            }
+            &:nth-of-type(3){
+                img{
+                    @include g.mq('sm') {
+                        width: 38px;
+                    }
+                }
+            }
+            &:nth-of-type(4){
+                img{
+                    @include g.mq('sm') {
+                        width: 81px;
+                    }
+                }
+            }
+        }
+
+        &_note{
+            max-width: 280px;
+            margin-left: auto;
+            margin-top: 5px;
+            font-size: 1.0rem;
+            color: #FFF;
+            padding-left: 3.3em;
+            text-indent: -3.3em;
+            font-family: g.font('yugo');
+
+            a{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .bl_price{
+        padding: 75px 0;
+        
+        @include g.mq('md') {
+            padding: 120px 0 125px;
+        }
+
+        &_box{
+            @include g.mq('md') {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+            }
+        }
+
+        &_title{
+            margin-bottom: 50px;
+            
+            @include g.mq('md') {
+                flex-grow: 1;
+                margin-bottom: 0;
+            }
+        }
+        
+        &_imgbox{
+            margin-bottom: 10px;
+            
+            @include g.mq('md') {
+                margin-bottom: 0;
+            }
+        }
+
+        &_txtbox{
+            @include g.mq('md') {
+                display: flex;
+                flex-direction: column;
+                max-width: 300px;
+            }
+        }
+
+        &_note{
+            font-size: 1.0rem;
+            font-family: g.font('yugo');
+        }
+    }
+
+    .bl_access{
+        padding: 75px 0 0;
+        
+        @include g.mq('md') {
+            padding: 120px 0 0;
+        }
+
+        &_title{
+            margin-bottom: 40px;
+
+            @include g.mq('sm') {
+                text-align: left;
+            }
+            
+            @include g.mq('md') {
+                margin-bottom: 50px;
+            }
+        }
+
+        &_imgbox{
+            &:not(:last-of-type){
+                margin-bottom: 55px;
+                
+                @include g.mq('md') {
+                    margin-bottom: 80px;
+                }
+            }
+        }
+    }
+
+    .bl_contact{
+        padding: 75px 0;
+        
+        @include g.mq('md') {
+            padding: 120px 0 80px;
+        }
+
+        &_title{
+            margin-bottom: 25px;
+            
+            @include g.mq('md') {
+                margin-bottom: 50px;
+            }
+        }
+
+        &_box{
+            padding: 70px 30px 50px;
+            background-color: #FFF;
+            
+            @include g.mq('md') {
+                padding: 60px;
+            }
+        }
+
+        &_list{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 30px;
+            
+            @include g.mq('md') {
+                flex-direction: row;
+                gap: 30px;
+                margin-bottom: 58px;
+            }
+        }
+
+        &_note{
+            font-size: 1.2rem;
+            text-align: center;
+            font-family: g.font('yugo');
+        }
+    }
+    
+    .bl_outline{
+        padding: 75px 0;
+        
+        @include g.mq('md') {
+            padding: 120px 0 80px;
+        }
+
+        &_title{
+            margin-bottom: 45px;
+
+            @include g.mq('sm') {
+                text-align: left;
+            }
+            
+            @include g.mq('md') {
+                margin-bottom: 60px;
+            }
+        }
+
+        &_item{
+            display: flex;
+            padding: 10px 0;
+            border-bottom: 1px solid g.color('key');
+            font-family: g.font('yugo');
+            font-size: 1.0rem;
+            
+            @include g.mq('md') {
+                font-size: 1.5rem;
+            }
+            
+            &:first-of-type{
+                border-top: 1px solid g.color('key');
+            }
+
+            &_tit{
+                color: g.color('key');
+                width: 26%;
+                min-width: 100px;
+                
+                @include g.mq('md') {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        &_note{
+            margin-top: 10px;
+            font-size: 1.0rem;
+            font-family: g.font('yugo');
+            
+            @include g.mq('md') {
+                margin-top: 20px;
+                margin-left: 20px;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+

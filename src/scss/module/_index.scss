@@ -1,0 +1,25 @@
+// レイアウト（接頭辞 ly_）
+//-------------------------------------------------------------------
+@use "layout/header";
+@use "layout/footer";
+@use "layout/inner";
+
+// ブロック（接頭辞 bl_）
+//-------------------------------------------------------------------
+@use "block/breadcrumb";
+@use "block/teaser";
+
+// エレメント（接頭辞 el_）
+//-------------------------------------------------------------------
+@use "element/btn";
+@use "element/menubar";
+@use "element/gotop";
+@use "element/title";
+@use "element/logo"; //プロジェクトロゴ
+@use "element/c-logo"; //コーポレートロゴ
+@use "element/hamburger";
+@use "element/nav";
+
+// 上書き用（接頭辞 なし）
+//-------------------------------------------------------------------
+@use "element/splide";

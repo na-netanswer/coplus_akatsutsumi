@@ -1,0 +1,9 @@
+{
+	// live serverでphpをプレビューできるようにする設定
+	"liveServer.settings.proxy": {
+		"enable": true, //プロキシを有効にする
+		"baseUri": "/", //プロジェクトのルートディレクトリ
+		"proxyUri": "http://localhost:8018" // 表示するURL
+	},
+	"liveServer.settings.port": 5501,
+}

@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------------
+	ボタン
+------------------------------------------------------------------------*/
+@use "../../global" as g;
+@use "sass:math";
+
+.el_btn {
+	display: inline-flex;
+	align-items: center;
+	height: 40px;
+	padding: 0 25px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: g.color('white');
+	background-color: g.color('key');
+	border-radius: 100vmax;
+}

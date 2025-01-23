@@ -1,0 +1,41 @@
+/*------------------------------------------------------------------------
+	splide
+------------------------------------------------------------------------*/
+@use "../../global" as g;
+
+.splide {
+	&__pagination{
+		left: auto;
+		// right: g.get-inner-side();
+		right: 20px;
+		bottom: 30px;
+		padding: 0;
+		
+		@include g.mq('md') {
+			right: g.scale_tab(140, 1280);
+		}
+	}
+
+	&__pagination__page{
+		border-radius: initial;
+		height: 20px;
+		width: 43px;
+		background-color: transparent;
+		
+		&.is-active{
+			transform: scale(1);
+			opacity: 1;
+			background-color: transparent;
+		}
+
+		&::before{
+			content: '';
+			display: block;
+			height: 2px;
+			width: 43px;
+			background-color: g.color('white');
+		}
+	}
+}
+
+

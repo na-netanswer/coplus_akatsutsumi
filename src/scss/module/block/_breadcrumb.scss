@@ -1,0 +1,25 @@
+/*------------------------------------------------------------------------
+    パンくず
+------------------------------------------------------------------------*/
+@use "../../global" as g;
+
+.bl_breadcrumb {
+    display: flex;
+
+    &_item {
+        font-size: 1.3rem;
+        color: g.color('base');
+
+        &:not(:last-of-type) {
+            margin-right: 10px;
+            
+            a {
+                padding-right: 10px;
+            }
+
+            &::after {
+                content: '>';
+            }
+        }
+    }
+}

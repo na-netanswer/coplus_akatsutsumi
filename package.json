@@ -1,0 +1,29 @@
+{
+  "volta": {
+    "node": "20.13.0"
+  },
+  "name": "coplus_setagayaakatsutsumi_ch",
+  "version": "1.0.0",
+  "description": "納品データを作成",
+  "main": "webpack.config.js",
+  "scripts": {
+    "prod": "webpack --mode production",
+    "watch": "webpack --mode development -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.0",
+    "sass": "^1.77.6",
+    "sass-loader": "^14.2.1",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "animate.css": "^4.1.1",
+    "wow.js": "^1.2.2"
+  }
+}

@@ -1,0 +1,219 @@
+@use "sass:math";
+@use "config";
+@use "function" as func;
+
+// メディアクエリ
+//-------------------------------------------
+@mixin mq($breakpoint) {
+    @media #{map-get(config.$breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+
+// 矢印「>」
+//-------------------------------------------
+@mixin arrow($type: 'right', $size: null, $weight: 2px, $color: func.color('base'), $round: false, $skew: false) {
+    // $type: 上下左右 'top', 'right', 'bottom', 'left' 
+    // $size: 長さ
+    // $weight: 太さ
+    // $color: 色
+    // $round: 端を丸める 使用する場合true (before領域とafter領域を使用します)
+    // $skew: ボーダーの角度を変更 使用する場合degを指定 roundがtrueの場合は使用不可
+
+    width: 1em;  
+    height: 1em;
+    font-size: $size; 
+    
+    // roundなし
+    @if ($round == false) {
+        border-top-style: solid;
+        border-left-style: solid;
+        border-width: $weight;
+        border-color: $color;
+    }
+    
+    // roundあり
+    @else {
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $color;
+            border-radius: math.div($weight, 2);
+        }
+
+        &::before {
+            width: $weight;
+            height: 100%;
+        }
+
+        &::after {
+            width: 100%;
+            height: $weight;
+        }     
+    }
+
+    // 向きと角度の対応付け
+    $forward: (
+        'top': 45deg,
+        'right': 135deg,
+        'bottom': -135deg,
+        'left': -45deg,
+    );
+
+    @each $to, $deg in $forward  {
+        @if ($type == $to) {
+            // skewなし
+            @if ($skew == false) {
+                transform: rotate($deg);
+            }
+            // skewあり
+            @else {
+                transform: rotate($deg) skew($skew, $skew);
+            }
+        }
+    }
+}
+
+
+// バツアイコン
+//-------------------------------------------
+@mixin close-icon($size: 40px, $weight: 2px, $color: func.color('base')) {
+    // $size: 長さ
+    // $width: 太さ
+    // $height: 色
+
+    display: block;
+    width: $size;
+    height: $size;
+
+    &::before, &::after { 
+        content: ""; 
+        position: absolute;
+        top: 0;
+        right: 0; 
+        bottom: 0; 
+        left: 0;
+        width: $size; 
+        height: $weight; 
+        margin: auto; 
+        background-color: $color; 
+    }
+
+    &::before { 
+        transform: rotate(45deg); 
+    } 
+
+    &::after { 
+        transform: rotate(135deg); 
+    }
+}
+
+
+// 三角
+//-------------------------------------------
+@mixin triangle($type: 'top', $width: 40px, $height: 20px, $color: func.color('base'), $position: 'static', $selector: '&::after') {
+    // $type: 三角形の方向 (例えばtopなら上、right-topなら右上という感じで8方向あります)
+    // $width: 横幅
+    // $height: 高さ
+    // $color: 色
+    // $position: アイコンの表示位置を$position-listから選択 (細かい位置調整は呼び出し元で行ってください)
+    // $selector: 表示するセレクタ (基本疑似要素を想定してます)
+
+    $position-list: (
+        'static', 'center', 'top', 'right', 'bottom', 'left'
+    );
+
+    #{$selector} {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+
+        @if ($type == 'top') {
+            border-width: 0 math.div($width, 2) $height math.div($width, 2);
+            border-color: transparent transparent $color transparent;
+        }
+        
+        @if ($type == 'right-top') {
+            border-width: 0 $width $height 0;
+            border-color: transparent $color transparent transparent;
+        }
+        
+        @if ($type == 'right') {
+            border-width: math.div($height, 2) 0 math.div($height, 2) $width;
+            border-color: transparent transparent transparent $color;
+        }
+        
+        @if ($type == 'right-bottom') {
+            border-width: 0 0 $height $width;
+            border-color: transparent transparent $color transparent;
+        }
+        
+        @if ($type == 'bottom') {
+            border-width: $height math.div($width, 2) 0 math.div($width, 2);
+            border-color: $color transparent transparent transparent;
+        }
+        
+        @if ($type == 'left-bottom') {
+            border-width: $height 0 0 $width;
+            border-color: transparent transparent transparent $color;
+        }
+        
+        @if ($type == 'left') {
+            border-width: math.div($height, 2) $width math.div($height, 2) 0;
+            border-color: transparent $color transparent transparent;
+        }
+        
+        @if ($type == 'left-top') {
+            border-width: $height $width 0 0;
+            border-color: $color transparent transparent transparent;
+        }
+    }
+
+    @if ($position != static) {
+        position: relative;
+
+        #{$selector} {
+            position: absolute;
+            top: 0;
+            right : 0;
+            bottom : 0;
+            left: 0;
+            margin: auto;
+
+            @if ($position == 'top') {
+                bottom: auto;
+            } @else if ($position == 'right') {
+                left: auto;
+            } @else if ($position == 'bottom') {
+                top: auto;
+            } @else if ($position == 'left') {
+                right: auto;
+            }
+        }
+    }
+}
+
+
+// inner
+//-------------------------------------------
+@mixin inner($type: 'pc') {
+    // $type: 'sp', 'pc', 'pc-s'から選択
+
+    margin-right: auto;
+    margin-left: auto;
+
+    @if ($type == 'sp') {
+        width: config.$inner_width_sp;
+    }
+    @if ($type == 'pc') {
+        width: config.$inner_width;
+    }
+    @if ($type == 'pc-s') {
+        width: config.$inner_width_small;
+    }
+}

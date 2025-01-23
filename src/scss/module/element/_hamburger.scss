@@ -1,0 +1,49 @@
+/*------------------------------------------------------------------------
+	タイトル
+------------------------------------------------------------------------*/
+@use "../../global" as g;
+
+.el_hamburger {
+	@include g.mq('lg') {
+		display: none;
+	}
+}
+
+.el_hamburger_icon {
+    display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+    cursor: pointer;
+    width: 25px;
+    height: 23px;
+    position: relative;
+}
+
+.el_hamburger_icon span {
+    background: #FFF;
+    display: block;
+    height: 1px;
+	width: 100%;
+    transition: all 0.3s;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* #menu-toggle:checked + .el_hamburger_icon span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+    position: absolute;
+}
+
+#menu-toggle:checked + .el_hamburger_icon span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .el_hamburger_icon span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+    position: absolute;
+} */
+

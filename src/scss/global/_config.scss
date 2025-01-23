@@ -1,0 +1,44 @@
+// ブレイクポイント
+$breakpoints: (
+    'xs': 'screen and (max-width: 375px)',
+    'sm': 'screen and (max-width: 767px)',
+    'md': 'screen and (min-width: 768px)',
+    'lg': 'screen and (min-width: 1160px)',
+    'lg_max': 'screen and (max-width: 1159px)',
+    'xl': 'screen and (min-width: 1320px)',
+    'xl_max': 'screen and (max-width: 1319px)',
+)!default;
+
+// inner-width
+$inner_width: 1280px;
+$inner_width_small: 1000px;
+$inner_width_sp: 86%;
+
+// フォント
+// 出力例) font('base');
+$font: (
+    'base': ("游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif)
+);
+
+// 色管理
+// 出力例) color('base');
+// 多次元mapの出力例) color('cat', 'event', 'performance');
+$color: (
+	'base': #333,
+	'white': #fff,
+	'key': #684723,
+	'key_dark': #224651,
+	'key_thin': #ebf0f2,
+);
+
+// 重ね順管理
+$z_index: (
+    'header': 1000,
+    'gotop': 999,
+);
+
+//ヘッダーの高さ
+$header_h: (
+    'sm': 70px,
+    'md': 80px
+);
