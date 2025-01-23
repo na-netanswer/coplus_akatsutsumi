@@ -4,7 +4,7 @@
  * */
 define ('SITE_URL', (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST']); //サイトURL
 define ('PAGE_URL', (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);//現在のページのURL（パラメータ含む）
-define ('SITE_NAME', '中野コーポラティブハウス'); //サイト名
+define ('SITE_NAME', '世田谷赤堤コーポラティブハウス'); //サイト名
 define ('SEPA', '｜'); //区切り文字
 define ('ROOT_DIR', '/setagayaakatsutsumi_ch/'); //ルートディレクトリ
 define ('ASSETS_DIR', ROOT_DIR.'assets/'); //アセットディレクトリ
@@ -44,7 +44,7 @@ $page_sub_id = isset($path_array[1]) ? $path_array[1] : NULL;
  */
 $conf_master = array(
     'title'         => SITE_NAME,
-    'desc'          => '中野コーポラティブハウス　自由設計でつくる新築マンション　中野駅まで徒歩7分　2025年1月中旬説明会開始予定',
+    'desc'          => '世田谷赤堤コーポラティブハウス　自由設計でつくる新築マンション　松原駅まで徒歩3分　豪徳寺駅まで徒歩12分　下高井戸駅まで徒歩13分　2025年3月上旬説明会開始予定',
     'og_title'      => '',
     'og_desc'       => '',
     'og_url'        => PAGE_URL,
