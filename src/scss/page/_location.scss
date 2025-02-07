@@ -52,6 +52,7 @@
 	&__txt{
 		line-height: 2;
 		letter-spacing: 0.1em;
+		color: #231815;
 
 		@include g.mq('sm') {
 			font-size: 1.0rem;
