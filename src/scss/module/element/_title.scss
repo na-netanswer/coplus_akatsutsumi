@@ -3,40 +3,64 @@
 ------------------------------------------------------------------------*/
 @use "../../global" as g;
 
-.el_title {
-	font-family: g.font('tit');
-	font-size: 2.8rem;
-	font-weight: normal;
-	color: g.color('key');
-	letter-spacing: 0.1em;
-
+.tit {
+	position: relative;
+	padding-bottom: 15px;
+    font-family: g.font('en');
+    line-height: 1.75;
+    letter-spacing: 0.3em;
+	color: g.color('base-light');
+	text-align: center;
+    font-size: 1.8rem;
+	font-weight: bold;
+	
 	@include g.mq('md') {
-		font-size: 3.3rem;
+		padding-bottom: 30px;
+		font-size: 3.2rem;
+		letter-spacing: 0.2em;
 	}
 
+	&::before{
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+		width: 83px;
+		height: 1px;
+		background-color: g.color('key');
+	}
+	
 	span {
 		display: block;
-		font-family: g.font('en');
-		font-size: 1.4rem;
-		color: g.color('key-light');
-		letter-spacing: 0.07em;
-
+		font-family: g.font('source-han');
+		font-weight: 500;
+		font-size: 1rem;
+		letter-spacing: 0.2em;
+		
 		@include g.mq('md') {
-			font-size: 1.2rem;
+			font-size: 1.4rem;
 		}
 	}
 
-	&.is-column{
-		@include g.mq('md') {
-			display: flex;
-			align-items: center;
-			gap: 20px;
+	&.is-head{
+		&::before{
+			width: 0;
 		}
-	}
-
-	&.is-center{
-		text-align: center;
 	}
 }
 
 
+/*------------------------------------------
+	head
+------------------------------------------*/
+.head{
+	margin: 40px 0 30px;
+	
+	@include g.mq('md') {
+		margin: 94px 0 68px;
+	}
+	
+}

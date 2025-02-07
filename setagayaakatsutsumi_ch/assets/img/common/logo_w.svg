@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 290.64 100.92">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .43em;
+      }
+
+      .cls-2 {
+        letter-spacing: .1em;
+      }
+
+      .cls-3 {
+        letter-spacing: .5em;
+      }
+
+      .cls-4 {
+        letter-spacing: .35em;
+      }
+
+      .cls-5 {
+        letter-spacing: .47em;
+      }
+
+      .cls-6 {
+        letter-spacing: .34em;
+      }
+
+      .cls-7 {
+        letter-spacing: .44em;
+      }
+
+      .cls-7, .cls-8, .cls-9, .cls-10, .cls-11 {
+        fill: #fff;
+      }
+
+      .cls-7, .cls-8, .cls-10, .cls-12 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-7, .cls-10 {
+        font-family: TsukuAOldMinPr6N-L-90ms-RKSJ-H, 'FOT-TsukuAOldMin Pr6N';
+        font-size: 9.54px;
+        stroke-width: .5px;
+      }
+
+      .cls-8 {
+        font-family: NewAtten-Bold, 'New Atten';
+        font-weight: 700;
+        stroke-width: .2px;
+      }
+
+      .cls-8, .cls-9 {
+        font-size: 18.52px;
+        letter-spacing: .45em;
+      }
+
+      .cls-13 {
+        letter-spacing: .14em;
+      }
+
+      .cls-14 {
+        letter-spacing: .35em;
+      }
+
+      .cls-15 {
+        letter-spacing: .37em;
+      }
+
+      .cls-16 {
+        filter: url(#outer-glow-1);
+      }
+
+      .cls-17 {
+        letter-spacing: .47em;
+      }
+
+      .cls-9 {
+        font-family: NewAtten-Book, 'New Atten';
+      }
+
+      .cls-18 {
+        letter-spacing: .31em;
+      }
+
+      .cls-12 {
+        fill: none;
+        stroke-width: 1.7px;
+      }
+
+      .cls-11 {
+        font-family: NewAtten-Medium, 'New Atten';
+        font-size: 8.98px;
+        font-weight: 500;
+        letter-spacing: .47em;
+      }
+    </style>
+    <filter id="outer-glow-1" x="-34" y="-33.48" width="358" height="168" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="11"/>
+      <feFlood flood-color="#000" flood-opacity=".56"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="image">
+    <g class="cls-16">
+      <g>
+        <text class="cls-10" transform="translate(49.52 8.64)"><tspan class="cls-3" x="0" y="0">世田谷赤</tspan><tspan class="cls-17" x="57.23" y="0">堤</tspan><tspan class="cls-15" x="71.25" y="0">コ</tspan></text>
+        <text class="cls-7" transform="translate(133.63 8.64) scale(.85 1)"><tspan x="0" y="0">ー</tspan></text>
+        <text class="cls-10" transform="translate(145.09 8.64)"><tspan class="cls-14" x="0" y="0">ポ</tspan><tspan class="cls-18" x="12.86" y="0">ラ</tspan><tspan class="cls-2" x="25.32" y="0">テ</tspan><tspan class="cls-13" x="35.81" y="0">ィ</tspan><tspan class="cls-1" x="46.65" y="0">ブ</tspan><tspan class="cls-4" x="60.32" y="0">ハ</tspan><tspan class="cls-6" x="73.2" y="0">ウ</tspan><tspan class="cls-5" x="86" y="0">ス</tspan></text>
+      </g>
+      <g>
+        <text class="cls-9" transform="translate(.1 63.88)"><tspan x="0" y="0">SETAGAYA</tspan></text>
+        <text class="cls-8" transform="translate(.1 84.17)"><tspan x="0" y="0">AKATSUTSUMI</tspan></text>
+        <text class="cls-11" transform="translate(.1 98.35)"><tspan x="0" y="0">COOPERATIVE HOUSE</tspan></text>
+        <g>
+          <rect class="cls-12" x="253.46" y="23.99" width="36.33" height="71.56"/>
+          <line class="cls-12" x1="253.46" y1="52.32" x2="289.79" y2="52.32"/>
+          <path class="cls-12" d="M253.32,23.99h0c.08,0,.14.06.14.14v28.06c0,.08-.06.14-.14.14h-28.06c-.08,0-.14-.06-.14-.14h0c0-15.56,12.63-28.2,28.2-28.2Z"/>
+        </g>
+        <polyline class="cls-12" points="4.09 42.37 4.09 23.99 289.79 23.99 289.79 95.55 170.84 95.55"/>
+        <line class="cls-12" x1="253.46" y1="95.55" x2="289.79" y2="52.32"/>
+      </g>
+    </g>
+  </g>
+</svg>

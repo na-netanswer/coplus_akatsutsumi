@@ -16,18 +16,11 @@ const splideInit = () => {
             for ( var i = 0; i < elms.length; i++ ) {
                 let slideCount = elms[i].querySelectorAll('.splide__slide').length;
                 let options = {
-                    type: slideCount > 1 ? 'loop' : 'slide',
-                    autoplay: true,
-                    pauseOnHover: false,
-                    drag: true,
-                    pagination: i === 1 ? false : true,
-                    arrows: false,
-                    rewind: true,
-                    speed: 2000,
-                    perPage: i === 1 ? 3 : 1,
-                    perMove: 1,
-                    gap: i === 1 ? '5px' : '0px',
-                    ...(i === 1 && { fixedWidth: '140px', fixedHeight: '140px' }), // 2つめのスライドのみ画像のサイズを指定
+                    type     : 'loop',
+                    perPage: 1.5,
+                    focus    : 'center',
+                    gap: '10px',
+                    pagination: false,
                 };
                 new Splide( elms[ i ], options ).mount();
             }

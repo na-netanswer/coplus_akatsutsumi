@@ -3,25 +3,288 @@
 ------------------------------------------------------------------------*/
 @use "../../global" as g;
 
-.ly_footer {
-	padding: 160px 0;
+/*------------------------------------------
+	map
+------------------------------------------*/
+.un_map {
+	background: g.color('key');
+	margin-bottom: 100px;
+
+	&_unit{
+		@include g.mq('md') {
+			display: flex;
+		}
+	}
+
+	&_text{
+		font-size: 1.2rem;
+		color: g.color('white');
+		font-family: g.font('mincho');
+		text-align: center;
+		letter-spacing: 0.5em;
+		
+		@include g.mq('md') {
+			font-size: 1.8rem;
+		}
+	}
+
+	&_tel{
+		font-size: 2.5rem;
+		color: g.color('white');
+		font-family: g.font('mincho');
+		text-align: center;
+		letter-spacing: 0.3em;
+		
+		@include g.mq('md') {
+			font-size: 3.7rem;
+		}
 	
-	@include g.mq('md') {
-		padding: 130px 0;
+		a{
+			@include g.mq('md') {
+				pointer-events: none;
+			}
+		}
+	}
+
+	&_time{
+		font-size: 1.0rem;
+		color: g.color('white');
+		font-family: g.font('mincho');
+		text-align: center;
+		letter-spacing: 0.1em;
+		
+		@include g.mq('md') {
+			font-size: 1.2rem;
+		}
+	}
+  }
+
+  @include g.mq('sm') {
+	.un_map {
+	  min-width: 100%;
+	  margin-bottom: 50px;
+	}
+  }
+
+  .un_map .inner_spwide {
+	display: flex;
+  }
+
+  @include g.mq('sm') {
+	.un_map .inner_spwide {
+	  flex-direction: column;
+	}
+  }
+
+  .un_map-info {
+	width: 50%;
+	padding: 60px;
+  }
+
+  @include g.mq('sm') {
+	.un_map-info {
+	  width: 100%;
+	  padding: 60px 0 30px;
+	}
+  }
+
+  .un_map-info .un_map-img:nth-of-type(1) {
+	max-width: 364px;
+	margin: 0 auto 50px;
+}
+
+@include g.mq('sm') {
+	.un_map-info .un_map-img:nth-of-type(1) {
+		width: 80%;
+		margin: 0 auto 30px;
+	}
+  }
+
+  .un_map-info .un_map-img:nth-of-type(2), .un_map-info .un_map-img:nth-of-type(3) {
+	max-width: 431px;
+	margin: 0 auto;
+  }
+
+  @include g.mq('sm') {
+	.un_map-info .un_map-img:nth-of-type(2), .un_map-info .un_map-img:nth-of-type(3) {
+	  width: 80%;
+	}
+  }
+
+  .un_map-gmap {
+	width: 50%;
+  }
+
+  @include g.mq('sm') {
+	.un_map-gmap {
+	  width: 100%;
+	}
+  }
+
+  .un_map #gmap {
+	width: 100%;
+	height: 100%;
+  }
+
+  @include g.mq('sm') {
+	.un_map #gmap {
+	  height: 450px;
+	}
+  }
+
+  
+/*------------------------------------------
+	クラブコプラス
+------------------------------------------*/
+.un_service {
+	background-image: url(../img/common/bg-club.jpg);
+	background-size: 100% auto;
+	
+	&_title{
+		margin-bottom: 45px;
+		text-align: center;
 	}
 
 	&_img{
-		img{
-			width: 100%;
-		}
+		text-align: center;
 	}
 
-	&_logo{
+	&_text{
 		text-align: center;
-
-		svg{
-			width: 125px;
-			height: auto;
-		}
 	}
 }
+@include g.mq('sm') {
+	.un_service {
+		min-width: 100%;
+	}
+}
+  
+  .un_service {
+	padding: 50px 0;
+	/*background-color: #214980;*/
+	color: #fff;
+	text-align: center;
+  }
+  
+  .un_service_title {
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 3px;
+  }
+  
+  .un_service_name {
+	display: block;
+	margin-top: 36px;
+  }
+  
+  .un_service_name img {
+	max-width: 300px;
+	width: 80%;
+	height: auto;
+  }
+  
+  .un_service_link {
+	border-color: #fff;
+	color: #fff;
+  }
+  
+  .un_service_text {
+	margin-top: 18px;
+	font-size: 16px;
+	letter-spacing: 3.2px;
+	line-height: 2;
+  }
+  
+  .button {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin: 25px auto 0;
+	width: 342px;
+	height: auto;
+	border: solid 1px #fff;
+	border-radius: 26px;
+	color: #004d40;
+	background-color: #fff;
+	padding: 10px 0;
+	font-size: 1.6rem;
+	font-weight: bold;
+	transition: 0.4s;
+  }
+  
+  .button:hover {
+	opacity: 0.5;
+  }
+  
+  @include g.mq('sm') {
+	.un_service {
+	  padding: 40px 0;
+	}
+	.un_service_title {
+	  font-size: 1.2rem;
+	  font-weight: bold;
+	  letter-spacing: 0.1em;
+	}
+	.un_service_text {
+	  margin-top: 18px;
+	  font-size: 1rem;
+	  line-height: 1.6rem;
+	  letter-spacing: 1px;
+	}
+	.un_service_name {
+	  display: block;
+	  padding: 0 15px;
+	  margin-top: 25px;
+	}
+	.un_service_link {
+	  border-color: #fff;
+	  color: #fff;
+	}
+	.button {
+	  max-width: 340px;
+	  width: 70%;
+	  padding: 12px 0;
+	  margin: 15px auto 0;
+	  border: solid 1px #fff;
+	  border-radius: 26px;
+	  color: #004d40;
+	  background-color: #fff;
+	  font-size: 1.13rem;
+	}
+  }
+
+  /*------------------------------------------
+	footer
+------------------------------------------*/
+.footer {
+	padding: 100px 0;
+  }
+  @include g.mq('sm') {
+	.footer {
+	  padding: 60px 0;
+	}
+  }
+
+  .footer .logo {
+	text-align: center;
+  }
+  .footer .logo img {
+	width: 190px;
+	height: 37px;
+  }
+
+  @include g.mq('sm') {
+	.footer .logo img {
+	  width: 100px;
+	  height: 20px;
+	}
+  }

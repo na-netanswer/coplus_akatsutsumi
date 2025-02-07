@@ -1,0 +1,284 @@
+/*******************************************
+    design
+*******************************************/
+@use "sass:math";
+@use "../global" as g;
+
+#design {
+
+	/*------------------------------------------
+    designhead
+------------------------------------------*/
+
+.designhead {
+    padding: 26px 0;
+
+    @include g.mq('md') {
+        padding: 50px 0 50px 0;
+    }
+
+    @include g.mq('xl') {
+        padding: 94px 0 50px 0;
+    }
+
+    &-area {
+        display: flex;
+        align-items: center;
+
+        @include g.mq('md') {
+            align-items: flex-start;
+        }
+    }
+
+    &-txtarea {
+        display: flex;
+        flex: 1;
+    }
+
+    &-tit {
+        width: 52px;
+
+        @include g.mq('md') {
+            width: 104px;
+        }
+    }
+
+    &-txt {
+        width: calc(100% - 52px);
+        padding-left: 15%;
+        margin-top: -0.3em;
+        font-size: 0.9rem;
+        font-weight: bold;
+        line-height: 2.4;
+        letter-spacing: 0.2em;
+
+        @include g.mq('md') {
+            width: calc(100% - 104px);
+            padding-left: 29px;
+            margin-top: 0;
+            font-size: 1.4rem;
+            letter-spacing: 0.3em;
+        }
+
+        @include g.mq('xl') {
+            padding-left: 87px;
+            font-size: 1.6rem;
+        }
+    }
+
+    &-img {
+        width: 93px;
+
+        @include g.mq('md') {
+            width: 350px;
+        }
+        
+        @include g.mq('xl') {
+            width: 426px;
+        }
+    }
+}
+
+
+/*------------------------------------------
+    flow
+------------------------------------------*/
+
+.flow {
+    $this: &;
+    padding: 17px 0 20px 0;
+
+    @include g.mq('md') {
+        padding: 86px 0 66px 0;
+    }
+
+    &-section {  
+        padding: 25px 0 30px 0;
+
+        @include g.mq('md') {
+            padding: 0;
+        }
+      
+        &:nth-of-type(even) {
+            background-color: g.color('design');
+            
+            #{$this}-area {
+                background-color: g.color('design');
+            }
+        }
+        
+        &._step02 {
+            @include g.mq('md') {
+                margin-top: -40px;
+            }      
+        }
+    }
+
+    &-area {
+        @include g.mq('md') {
+            display: flex;
+        }
+
+        &._step02 {
+            align-items: center;
+        }
+    }
+
+    &-img {
+
+        @include g.mq('md') {
+            display: flex;
+            align-items: center;
+            margin-right: 21px;
+        }
+
+        @include g.mq('xl') {
+            display: block;
+            width: 307px;
+            margin-right: 0;
+        }
+
+        &._step03 {
+            @include g.mq('xl') {
+                margin-top: -40px;
+            }
+        }
+
+        &._step04 {
+            @include g.mq('xl') {
+                margin-top: -45px;
+            }
+        }
+
+        &._step05 {
+            @include g.mq('xl') {
+                margin-top: -90px;
+            }
+        }
+    }
+
+    &-content {
+        @include g.mq('md') {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @include g.mq('xl') {
+            padding-right: 59px;
+            padding-left: 87px;
+        }
+        
+        &._step01 {
+            @include g.mq('md') {
+                padding-top: 70px;
+                padding-bottom: 87px;   
+            }
+        }
+
+        &._step02 {
+            @include g.mq('md') {
+                padding-top: 80px;
+                padding-bottom: 77px;
+            }
+        }
+
+        &._step03 {
+            @include g.mq('md') {
+                padding-top: 95px;
+                padding-bottom: 100px;
+            }
+        }
+
+        &._step04 {
+            @include g.mq('md') {
+                padding-top: 85px;
+                padding-bottom: 72px;
+            }
+        }
+
+        &._step05 {
+            @include g.mq('md') {
+                padding-top: 65px;
+                padding-bottom: 92px;
+            }
+        }
+    }
+
+    &-tit {
+        width: 204px;
+        margin-top: 28px;
+
+        @include g.mq('md') {
+            width: 272px;
+            margin-top: 0;
+        }
+    }
+
+    &-txt {
+        width: 255px;
+        margin-top: 0.6em;
+        font-size: 1.4rem;
+        letter-spacing: 0.1em;
+
+        @include g.mq('md') {
+            width: 326px;
+            font-size: 1.5rem;
+            letter-spacing: 0.14em;
+            padding-right: 15px;
+        }
+
+        @include g.mq('xl') {
+        }
+    }
+
+    &-comment {
+        position: relative;
+        margin-top: 40px;
+        font-weight: bold;
+        font-size: 1.4rem;
+
+        @include g.mq('md') {
+            margin-top: 30px;
+            letter-spacing: 0.1em;
+            line-height: 1.6;
+        }
+
+        @include g.mq('xl') {
+            width: 398px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -16px;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            
+            @include g.mq('md') {
+                top: -25px;
+                width: 21px;
+                height: 21px;            
+            }
+        }
+        
+        &._male {
+            &::before {
+                background: url('../img/design/male_icon.png') no-repeat border-box center/cover;              
+            }
+        }
+
+        &._female {
+            @include g.mq('md') {
+                margin-top: 58px;
+            }
+
+            &::before {
+                background: url('../img/design/female_icon.png') no-repeat border-box center/cover;              
+            }
+        }
+    }
+}
+
+}
+

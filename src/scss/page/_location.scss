@@ -1,0 +1,253 @@
+/*******************************************
+    ロケーション
+*******************************************/
+@use "sass:math";
+@use "../global" as g;
+
+#location {
+
+/*------------------------------------------
+	geo
+------------------------------------------*/
+.geo{
+
+	&__box{
+		margin-bottom: 40px;
+
+		@include g.mq('md') {
+			display: grid;
+			grid-template-columns: 400px 1fr;
+			gap: 20px;
+			margin-bottom: 100px;
+		}
+
+		@include g.mq('xl') {
+			grid-template-columns: 520px 1fr;
+			gap: 100px;
+		}
+	}
+
+	&__textarea{
+		@include g.mq('sm') {
+			margin-top: 50px;
+		}
+	}
+
+	&__subtit{
+		margin-bottom: 25px;
+		font-size: 1.4rem;
+		text-align: center;
+		color: #604C3F;
+		font-family: g.font('mincho');
+		font-weight: normal;
+		letter-spacing: 0.5em;
+		
+		@include g.mq('md') {
+			margin-bottom: 50px;
+			font-size: 2.0rem;
+			text-align: left;
+		}
+	}
+
+	&__txt{
+		line-height: 2;
+		letter-spacing: 0.1em;
+	}
+
+	&__imgbox{
+		margin-bottom: 40px;
+		
+		@include g.mq("md") {
+			margin-bottom: 80px;
+		}
+	}
+
+	&__list{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 15px;
+
+		@include g.mq('md') {
+			gap: 25px 30px;
+		}
+	}
+
+	&__item{
+		width: calc(50% - 8px);
+
+		@include g.mq('md') {
+			width: calc(33.333333333333333333333333333333% - 25px);
+		}
+	}
+
+	&__cap{
+
+		margin-top: 5px;
+		font-size: 1.0rem;
+		
+		@include g.mq('md') {
+			font-size: 1.1rem;
+		}
+	}
+}
+
+/*------------------------------------------
+	environ
+------------------------------------------*/
+.environ{
+	$this: ".environ";
+	padding: 50px 0 120px;
+	background-color: g.color('bg');
+	
+	@include g.mq('md') {
+		padding: 100px 0 250px;
+	}
+
+	&__tit{
+		text-align: center;
+		font-size: 1.2rem;
+		color: g.color('key');
+		letter-spacing: 0.5em;
+		font-family: g.font('mincho');
+
+		@include g.mq('md') {
+			font-size: 2.4rem;
+		}
+	}
+
+	&__catch{
+		text-align: center;
+		margin-top: 20px;
+		
+		@include g.mq('md') {
+			margin-top: 45px;
+		}
+	}
+
+	&__item{
+		display: flex;
+		flex-direction: column-reverse;
+		margin-top: 50px;
+
+		@include g.mq('md') {
+			display: flex;
+			align-items: flex-start;
+			flex-direction: row;
+			margin-top: 90px;
+		}
+		
+		&:first-of-type{
+			margin-top: 30px;
+
+			@include g.mq('md') {
+				margin-top: 90px;
+			}
+		}
+
+		&:nth-of-type(2n){
+
+			@include g.mq('md') {
+				flex-direction: row-reverse;
+			}
+
+			#{$this}__txtbox{
+				@include g.mq('sm') {
+					padding: 40px 76px 20px 25px;
+				}
+			}
+
+			#{$this}__town-tit{
+				left: auto;
+				right: 18px;
+				
+				@include g.mq('md') {
+					left: 0;
+					right: 0;
+				}
+			}
+
+			#{$this}__town-pic{
+				margin-left: -4.3%;
+				margin-right: auto;
+				
+				@include g.mq('md') {
+					margin-left: auto;
+				}
+			}
+		}
+	}
+
+	&__txtbox{
+		position: relative;
+		background: #FFF;
+		padding: 40px 25px 20px 76px;
+		
+		@include g.mq('md') {
+			margin-top: 47px;
+			padding: 54px 47px 30px;
+		}
+	}
+
+	&__town-tit{
+		position: absolute;
+		top: -10px;
+		left: 18px;
+		font-size: 2.0rem;
+		text-align: center;
+		font-family: g.font('mincho');
+		color: g.color('key');
+		font-weight: normal;
+		letter-spacing: 0.5em;
+		writing-mode: vertical-rl;
+
+		@include g.mq('md') {
+			top: -35px;
+			right: 0;
+			left: 0;
+			font-size: 4.0rem;
+			writing-mode: horizontal-tb;
+		}
+	}
+
+	&__town-txt{
+		line-height: 2;
+	}
+
+	&__town-pic{
+		flex: 0 0 auto;
+		width: 81%;
+		position: relative;
+		margin-left: auto;
+        margin-right: -4.3%;
+		margin-bottom: -25px;
+		
+		@include g.mq('md') {
+			width: 380px;
+			margin-right: auto;
+			margin-bottom: 0;
+		}
+
+		@include g.mq('xl') {
+			width: 564px;
+		}
+	}
+
+	&__cap{
+		position: absolute;
+		bottom: 7px;
+		right: 15px;
+		color: #FFF;
+		font-size: 1.0rem;
+		
+		@include g.mq('md') {
+			bottom: 15px;
+			font-size: 1.5rem
+		}
+	}
+
+
+}
+
+}
+

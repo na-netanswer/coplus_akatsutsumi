@@ -34,4 +34,10 @@
             width: g.$inner_width_small;
         }
     }
+
+    &.is_most_wide {
+        @include g.mq('lg') {
+            width: 1280px;
+        }
+    }
 }

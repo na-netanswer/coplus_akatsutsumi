@@ -63,70 +63,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="app">
 
 <!-- # ===================headerエリア_start================= # -->
-
-<header class="ly_header">
-	<div class="ly_header_inner">
-		<div class="ly_header_logo">
-			<a href="/setagayaakatsutsumi_ch/">
-				<?php include('logo.php'); ?>
+	
+<?php if( $page_id == 'top'): ?>
+	<!-- header -->
+	<header class="header js_header">
+		<p class="header__logo">
+			<a href="<?php echo ROOT_DIR; ?>">
+				<picture>
+					<source media="(max-width: 1319px)" srcset="<?php echo ASSETS_DIR; ?>img/common/logo_sp.svg">
+					<img src="<?php echo ASSETS_DIR; ?>img/common/logo_pc.svg" alt="世田谷赤堤コーポラティブハウス" width="450" height="57">
+				</picture>
 			</a>
+		</p>
+		<div class="cta-bnr hp_xl_none"><a href="http://campage.jp/cooperative/setagayaakatsutsumi_ch_surv?_fsi=8BN5Xy84&_gl=1*e6yuhf*_gcl_au*MTExNjY5MzkxNi4xNzM2OTExNDE0" target="_blank">最新情報メール<br>登録はこちら ></a></div>
+		<ul class="header__list hp_xl_max_none">
+			<li class="header__item is-contact"><a href="http://campage.jp/cooperative/setagayaakatsutsumi_ch_surv?_fsi=8BN5Xy84&_gl=1*e6yuhf*_gcl_au*MTExNjY5MzkxNi4xNzM2OTExNDE0" target="_blank">最新情報メール登録はこちら</a></li>
+			<li class="header__item is-instagram"><a href="https://www.instagram.com/coplus.arch/" target="_blank"><img src="<?php echo ASSETS_DIR; ?>img/common/icon_instagram.svg" alt="instagram" width="30" height="30"></a></li>
+			<li class="header__item is-facebook"><a href="https://business.facebook.com/COPLUS.inc" target="_blank"><img src="<?php echo ASSETS_DIR; ?>img/common/icon_facebook.svg" alt="facebook" width="30" height="30"></a></li>
+			<li class="header__item is-coplus"><a href="https://cooperativehouse.jp/" target="_blank"><img src="<?php echo ASSETS_DIR; ?>img/common/coplus_logo.svg" alt="coplus" width="94" height="19"></a></li>
+		</ul>
+	</header><!-- ./header -->
+<?php else: ?>
+	<header class="header js_header">
+		<figure class="header__logo">
+			<a href="<?php echo ROOT_DIR; ?>/">
+				<picture>
+					<source media="(max-width: 1319px)" srcset="<?php echo ASSETS_DIR; ?>img/common/logo_sp.svg">
+					<img src="<?php echo ASSETS_DIR; ?>img/common/logo_w.svg" alt="世田谷赤堤コーポラティブハウス" width="450" height="57">
+				</picture>
+			</a>
+		</figure>
+		<div class="header__gnav-area">
+			<div class="cta-bnr hp_xl_none"><a href="http://campage.jp/cooperative/setagayaakatsutsumi_ch_surv?_fsi=8BN5Xy84&_gl=1*e6yuhf*_gcl_au*MTExNjY5MzkxNi4xNzM2OTExNDE0" target="_blank">最新情報メール<br>登録はこちら ></a></div>
+			<?php include(dirname(__FILE__)."/gnav.php"); ?>
 		</div>
-		<div class="ly_header_col">
-			<?php 
-			/* <nav class="el_nav">
-				<ul class="el_nav_head hp_lg_none">
-					<li class="el_nav_head_item">
-						<a href="/setagayaakatsutsumi_ch/">
-							<?php include('logo.php'); ?>
-						</a>
-					</li>
-					<li class="el_nav_head_item">
-						<label class="el_nav_close">
-							<span></span>
-							<span></span>
-						</label>
-					</li>
-				</ul>
-				<ul class="el_nav_list">
-					<li class="el_nav_item ly_header_item"><a href="#ABOUT">ABOUT<span>コネストについて</span></a></li>
-					<li class="el_nav_item ly_header_item"><a href="#LOCATION">LOCATION<span>ロケーション</span></a></li>
-					<li class="el_nav_item ly_header_item"><a href="#FACILITY">FACILITY<span>設備</span></a></li>
-					<li class="el_nav_item ly_header_item"><a href="#SYSTEM">SYSTEM<span>システム</span></a></li>
-					<li class="el_nav_item ly_header_item"><a href="#PRICE">PRICE<span>費用について</span></a></li>
-					<li class="el_nav_item ly_header_item"><a href="#ACCESS">ACCESS<span>アクセス</span></a></li>
-					<li class="el_nav_item ly_header_item"><a href="#OUTLINE">OUTLINE<span>物件概要</span></a></li>
-				</ul>
-				<figure class="el_nav_icon hp_lg_none">
-					<a href="/" target="_blank">
-						<?php include('c-logo.php'); ?>
-					</a>
-				</figure>
-			</nav> */
-			?>
-			<a class="ly_header_btn" href="http://campage.jp/cooperative/setagayaakatsutsumi_ch_surv" target="_blank">最新情報<br class="hp_md_none">メール登録<span class="hp_sm_none">はこちら</span><?php include('icon_btn.php'); ?></a>
-			<ul class="ly_header_sns_list hp_sm_none">
-				<li class="ly_header_sns_item is-instagram"><a href="https://www.instagram.com/coplus.arch/" target="_blank"><img src="<?php echo ASSETS_DIR; ?>img/common/icon_instagram.svg" alt="instagram" width="26" height="26"></a></li>
-				<li class="ly_header_sns_item is-facebook"><a href="https://business.facebook.com/COPLUS.inc" target="_blank"><img src="<?php echo ASSETS_DIR; ?>img/common/icon_facebook.svg" alt="facebook" width="26" height="26"></a></li>
-			</ul>
-			<?php
-            /* <div class="el_hamburger ly_header_hamburger">
-                <input type="checkbox" id="menu-toggle">
-                <label for="menu-toggle" class="el_hamburger_icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-            </div> */
-			?>
-			<div class="el_c-logo ly_header_c-logo hp_sm_none">
-				<a href="/" target="_blank">
-					<?php include('c-logo.php'); ?>
-				</a>
-			</div>
-		</div>
-	</div>
-</header>
-<!-- ./ly_header -->
+	</header>
+<?php endif; ?>
 
 <main class="ly_main">
 <!-- # ===================headerエリア_end================= # -->

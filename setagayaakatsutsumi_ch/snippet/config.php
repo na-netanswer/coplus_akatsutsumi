@@ -22,14 +22,14 @@ define ('ABSOLUTE_ROOT_DIR', $_SERVER['DOCUMENT_ROOT'].ROOT_DIR); //ルートデ
  * bodyのclassに設定されます。
  * */
 $url = preg_replace('/\?.+$/', '', $_SERVER["REQUEST_URI"]);//パラメータ以降削除
-$path_array = explode('/', substr_replace($url, "", 1,1)); //URLを配列に格納
+$path_array = explode('/', substr_replace($url, "", 0,1)); //URLを配列に格納
 $path_array = preg_replace('/\..*$/', '', $path_array); //拡張子削除
 
 // page_id設定
-if (!$path_array[0] || $path_array[0] === 'index') {
+if (!$path_array[1] || $path_array[1] === 'index') {
     $page_id = 'top';
 } else {
-    $page_id = $path_array[0];
+    $page_id = $path_array[1];
 }
 
 // page_sub_id設定

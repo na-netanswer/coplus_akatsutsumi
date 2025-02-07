@@ -9,6 +9,14 @@ html {
     overflow-y: scroll; //スクロールバーを常に表示
 }
 
+main{
+    padding-top: map-get(g.$header_h, 'sm');
+
+    @include g.mq('xl') {
+        padding-top: map-get(g.$header_h, 'md');
+    }
+}
+
 body {
     font-family: g.font('base');
     font-size: 1.4rem;

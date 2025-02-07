@@ -1,0 +1,294 @@
+/*******************************************
+    アクセス
+*******************************************/
+@use "sass:math";
+@use "../global" as g;
+
+#access {
+
+/*------------------------------------------
+	access-map
+------------------------------------------*/
+.access-map{
+	$this: '.access-map';
+
+	&__catch{
+		margin-bottom: 25px;
+		font-size: 1.4rem;
+		font-family: g.font('mincho');
+		font-weight: normal;
+		text-align: center;
+		letter-spacing: 0.3em;
+		color: g.color('key');
+		
+		@include g.mq('md') {
+			margin-bottom: 50px;
+			font-size: 2.5rem;
+		}
+	}
+
+	&__list{
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 30px;
+		padding: 10px 0 10px 10px;
+		font-family: g.font('source-han');
+		color: #595757;
+		border-top: 1px solid #595757;
+		border-bottom: 1px solid #595757;
+
+		@include g.mq('xl') {
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			row-gap: 25px;
+			border-top: none;
+			border-bottom: none;
+			padding: 0;
+			margin-bottom: 60px;
+		}
+
+		&.is-type01{
+			font-family: yakuhanjp, g.font('source-han');
+		}
+
+		&.is-type02{
+			border-top: none;
+			border-bottom: none;
+			padding: 0;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: flex-start;
+			width: 100%;
+			gap: 40px;
+
+			#{$this}__item{
+				display: block;
+				border-right: none;
+				border-left: none;
+				padding: 0;
+			}
+			#{$this}__nearbox{
+				display: block;
+			}
+			#{$this}__station{
+				min-width: auto;
+				text-align: center;
+				margin-bottom: 15px;
+
+				span{
+					font-size: 1.5rem;
+
+					@include g.mq('md') {
+						font-size: 2.2rem;
+					}
+				}
+			}
+
+			#{$this}__time{
+				text-align: center;
+				margin-bottom: 15px;
+
+				span{
+					@include g.mq('md') {
+						font-size: 3.3rem;
+					}
+				}
+			}
+		}
+
+		&.is-type03{
+			align-items: center;
+			border-top: none;
+			border-bottom: none;
+			padding: 0;
+
+			#{$this}__item{
+				display: block;
+				border-right: none;
+				border-left: none;
+				padding: 0;
+			}
+
+			#{$this}__nearbox{
+				display: block;
+			}
+			
+			#{$this}__station{
+				margin-bottom: 15px;
+			}
+
+			#{$this}__time{
+				margin-bottom: 15px;
+				text-align: center;
+
+				span{
+					@include g.mq('md') {
+						font-size: 3.3rem;
+					}
+				}
+			}
+		}
+	}
+
+
+
+	&__item{
+		padding: 7px 0;
+		display: flex;
+		align-items: flex-end;
+		
+		@include g.mq('xl') {
+			display: block;
+			padding: 15px 30px;
+			border-right: 1px solid #595757;
+			
+			&:first-of-type{
+				border-left: 1px solid #595757;
+			}
+
+			&:nth-of-type(4n){
+				border-left: 1px solid #595757;
+			}
+		}
+	}
+
+	&__line{
+		min-width: 80px;
+		font-size: 1.0rem;
+		font-weight: bold;
+		letter-spacing: 0.1em;
+		
+		@include g.mq('md') {
+			min-width: auto;
+			font-size: 1.4rem;
+		}
+	}
+
+	&__nearbox{
+		display: flex;
+		align-items: flex-end;
+		flex-grow: 1;
+		
+		@include g.mq('md') {
+			justify-content: center;
+		}
+	}
+
+	&__station{
+		min-width: 156px;
+		flex: 0 0 auto;
+		font-size: 1.0rem;
+		letter-spacing: 0.1em;
+		font-weight: bold;
+		line-height: 1;
+		
+		@include g.mq('md') {
+			min-width: auto;
+			font-size: 1.4rem;
+		}
+
+		span{
+			font-size: 1.5rem;
+			
+			@include g.mq('md') {
+				font-size: 2.8rem;
+			}
+		}
+	}
+
+	&__time{
+		font-size: 1.0rem;
+		letter-spacing: 0.1em;
+		font-weight: bold;
+		line-height: 1;
+		
+		@include g.mq('md') {
+			margin-left: 5px;
+			font-size: 1.4rem;
+		}
+
+		span{
+			display: inline-block;
+			margin: 0 5px;
+			font-size: 2.2rem;
+			color: #356E6B;
+			
+			@include g.mq('md') {
+				font-size: 4.0rem;
+			}
+		}
+	}
+
+	&__txt{
+		font-size: 1.0rem;
+		letter-spacing: 0.1em;
+		margin-top: 10px;
+		text-align: center;
+		
+		@include g.mq('md') {
+			font-size: 1.2rem;
+		}
+	}
+
+	&__start-station{
+		margin: 25px 0 25px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #595757;
+		
+		@include g.mq('md') {
+			margin: 50px 0 30px;
+			padding-bottom: 20px;
+		}
+	}
+
+	&__start-station-txt{
+		font-family: g.font('source-han');
+		font-size: 1.2rem;
+		letter-spacing: 0.1em;
+		font-weight: bold;
+		text-align: center;
+		color: #595757;
+		
+		@include g.mq('md') {
+			font-size: 1.4rem;
+		}
+
+		span{
+			font-size: 1.5rem;
+			
+			@include g.mq('md') {
+				font-size: 2.8rem;
+			}
+		}
+	}
+
+	&__note{
+		font-size: 1.0rem;
+		margin-bottom: 100px;
+		
+		@include g.mq('md') {
+			max-width: 1000px;
+			margin-inline: auto;
+			font-size: 1.2rem;
+		}
+
+
+	}
+
+	&__img{
+		text-align: center;
+	}
+
+	&__unit{
+		@include g.mq('md') {
+			display: flex;
+			justify-content: center;
+			gap: 40px;
+		}
+	}
+}
+
+}
+

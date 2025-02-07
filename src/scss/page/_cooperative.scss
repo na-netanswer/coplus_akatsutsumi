@@ -1,0 +1,202 @@
+/*******************************************
+    cooperative
+*******************************************/
+@use "sass:math";
+@use "../global" as g;
+
+#cooperative {
+
+/*------------------------------------------
+	cooperative house
+------------------------------------------*/
+.contents{
+	$this: ".contents";
+
+	&-tit{	
+		padding-bottom: 90px;
+		@include g.mq("sm") {
+			padding-bottom: 45px;
+		}
+	}
+
+	&-item{
+		padding-bottom: 100px;
+		@include g.mq("sm") {
+			padding-bottom: 50px;
+		}
+    }
+    
+    &-img {
+        @include g.mq('sm') {
+            margin: 0 calc(50% - 50vw);
+        }   
+    }
+
+	&-item._01,
+	&-item._03{
+
+		#{$this}-subtit{
+			width: 753px;
+			margin-left: 60px;
+			margin-bottom: 30px;
+			
+			@include g.mq("xl_max") {
+				width: 100%;
+				margin-left: 0;
+				margin-bottom: 20px;
+			}
+		}
+		#{$this}-box{
+			display: flex;
+			justify-content: space-between;
+
+			@include g.mq("sm") {
+				flex-direction: column;
+			}
+		}
+		#{$this}-img{
+			width: 813px;
+			flex: 0 0 auto;
+
+			@include g.mq('xl_max') {
+				width: 400px;
+			}
+			
+			@include g.mq("sm") {
+                width: 100vw;
+				margin-bottom: 10px;
+			}
+		}
+		#{$this}-textarea{
+			padding: 0 60px;
+			
+			@include g.mq("sm") {
+				padding: 0;
+			}
+		}
+		#{$this}-tititem{
+			font-weight: bold;
+			font-size: 1.5rem;
+			padding-bottom: 15px;
+            color: g.color('key');
+            
+            @include g.mq('sm') {
+			font-size: 1.2rem;
+            }
+		}
+		#{$this}-p{
+			font-size: 1.2rem;
+		}
+	}
+
+	&-item._02{
+
+		#{$this}-subtit{
+			width: 1066px;
+			margin: 0 auto 60px;
+			
+			@include g.mq("xl_max") {
+                width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+		#{$this}-box{
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: center;
+			align-items: center;
+			@include g.mq("sm") {
+				flex-direction: column;
+			}
+		}
+		#{$this}-img{
+			width: 687px;
+			flex: 0 0 auto;
+
+			@include g.mq('xl_max') {
+				width: 400px;
+			}
+
+			@include g.mq("sm") {
+                width: 100vw;
+				margin-bottom: 10px;
+			}
+		}
+		#{$this}-textarea{
+			width: 366px;
+			padding-right: 60px;
+
+			@include g.mq('sm') {
+				width: 100%;
+				padding-right: 0;
+			}
+		}
+		#{$this}-tititem{
+			font-weight: bold;
+			font-size: 1.5rem;
+			padding-bottom: 15px;
+			color: g.color('key');
+		}
+		#{$this}-p{
+			font-size: 1.2rem;
+		}
+	}
+
+	&-item._04{
+
+		#{$this}-subtit{
+			width: 753px;
+			margin-left: auto;
+			margin-right: 60px;
+			margin-bottom: 30px;
+			
+			@include g.mq("xl_max") {
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+		}
+		#{$this}-box{
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+
+			
+			@include g.mq("sm") {
+				flex-direction: column;
+			}
+		}
+		#{$this}-img{
+			width: 813px;
+			flex: 0 0 auto;
+
+			@include g.mq('xl_max') {
+				width: 400px;
+			}
+
+			@include g.mq("sm") {
+                width: 100vw;
+				margin-bottom: 10px;
+			}
+		}
+		#{$this}-textarea{
+			padding: 0 60px;
+			
+			@include g.mq("sm") {
+				padding: 0;
+			}
+		}
+		#{$this}-tititem{
+			font-weight: bold;
+			font-size: 1.5rem;
+			padding-bottom: 15px;
+			color: g.color('key');
+		}
+		#{$this}-p{
+			font-size: 1.2rem;
+		}
+	}
+}
+
+}
+
