@@ -38,9 +38,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 				<div class="geo__textarea">
 					<h3 class="geo__subtit">ゆったりとしたまちで叶える<br>理想の暮らし</h3>
 					<p class="geo__txt">地域と密接した世田谷線「松原駅」から徒歩3分。<br>
-					世田谷線の各駅を降りると、<br>
-					「六所神社」や「豪徳寺」など昔ながらの場所が点在し<br>
-					商店街には個人経営のお店が並びます。<br>
+					世田谷線の各駅を降りると、<br class="hp_sm_none">「六所神社」や「豪徳寺」など昔ながらの場所が点在し<br class="hp_sm_none">商店街には個人経営のお店が並びます。<br>
 					放課後にはすぐ近くの「赤松公園」であそび、<br>
 					晴れた週末には少し足を伸ばして「羽根木公園」へ。<br>
 					世田谷区アドレスで日々の暮らしをゆっくりとたのしむ。<br>

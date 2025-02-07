@@ -89,7 +89,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="<?php echo ROOT_DIR; ?>/">
 				<picture>
 					<source media="(max-width: 1319px)" srcset="<?php echo ASSETS_DIR; ?>img/common/logo_sp.svg">
-					<img src="<?php echo ASSETS_DIR; ?>img/common/logo_w.svg" alt="世田谷赤堤コーポラティブハウス" width="450" height="57">
+					<img src="<?php echo ASSETS_DIR; ?>img/common/PC_header.svg" alt="世田谷赤堤コーポラティブハウス" width="450" height="57">
 				</picture>
 			</a>
 		</figure>
