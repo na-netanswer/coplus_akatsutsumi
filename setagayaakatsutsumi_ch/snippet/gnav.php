@@ -20,7 +20,7 @@
 				</ul>
 			</li>
 			<?php endif; ?>
-			<li class="cta-bnr"><a href="https://campage.jp/cooperative/daizawa2_nonmebmak_copy_20230902160932" target="_blank">説明会<span>予約はコチラ</span></a></li>
+			<li class="cta-bnr"><a href="https://campage.jp/cooperative/setagayaakatsutsumi_ch_setsummeikai_1" target="_blank">説明会<span>予約はコチラ</span></a></li>
 		</ul>
 	</nav><!-- /.gnav -->
 
@@ -37,6 +37,6 @@
             <li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>outline/">物件概要</a></li>
             <li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>cooperative/">コーポラティブハウスとは</a></li>
             <li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>design/">自由設計について</a></li>
-			<li class="gnav-item _contact"><a href="https://campage.jp/cooperative/daizawa2_nonmebmak_copy_20230902160932" target="_blank">説明会予約はこちら<i><img src="<?php echo ASSETS_DIR; ?>img/common/icon_next_brown.svg" alt=""></i></a></li>
+			<li class="gnav-item _contact"><a href="https://campage.jp/cooperative/setagayaakatsutsumi_ch_setsummeikai_1" target="_blank">説明会予約はこちら<i><img src="<?php echo ASSETS_DIR; ?>img/common/icon_next_brown.svg" alt=""></i></a></li>
         </ul>
 	</nav><!-- /.gnav -->

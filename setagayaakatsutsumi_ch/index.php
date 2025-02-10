@@ -46,7 +46,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 		<div class="ly_inner">
 			<p class="un_event__catch">コーポラティブハウスは「新築マンション」でありながら、個別に間取りやデザインを自由に創っていくことができます。多様化するライフスタイルやワークスタイルにフィットするよう、設計者と検討を重ね、自分自身で思い思いの住まいを創っていくことで、より魅力的で、かつ機能的な住まいが生まれます。</p>
 			<figure class="un_event_img"><img src="<?php echo ASSETS_DIR; ?>img/top/session_txt.webp" alt="先行説明会日程"></figure>
-			<div class="un_event_btn el_btn"><a href="https://zteb.f.msgs.jp/webapp/form/20799_zteb_87/index.do" target="_blank"><span>先行説明会予約はコチラ</span><img src="<?php echo ASSETS_DIR; ?>img/common/icon_next.svg" alt=""></a></div>
+			<div class="un_event_btn el_btn"><a href="https://campage.jp/cooperative/setagayaakatsutsumi_ch_setsummeikai_1" target="_blank"><span>先行説明会予約はコチラ</span><img src="<?php echo ASSETS_DIR; ?>img/common/icon_next.svg" alt=""></a></div>
 		</div>
 
 	</section><!-- /.textarea -->

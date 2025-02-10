@@ -50,19 +50,25 @@ h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bw
 <!-- End: Adobe Fonts -->
 <script src="<?php echo ASSETS_DIR; ?>js/main.js"></script>
 <script>
-function initMap() {
-    const location = { lat: 35.65862, lng: 139.64037 }; // 世田谷赤堤の座標
-    const map = new google.maps.Map(document.getElementById('gmap'), {
-        zoom: 16,
-        center: location
-    });
-    const marker = new google.maps.Marker({
-        position: location,
-        map: map
-    });
-}
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUhVDUQZmDc_InQxsFiaT0LB-aXiU0Sts&callback=initMap" async defer></script>
-
+    function initMap() {
+        const location = { lat: 35.65817865492579, lng: 139.64216115462983 }; // 世田谷赤堤の座標
+        const map = new google.maps.Map(document.getElementById('gmap'), {
+            zoom: 15,
+            center: location,
+            minZoom: 13,
+            maxZoom: 18
+        });
+        const marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            icon: {
+                url: '/setagayaakatsutsumi_ch/assets/img/common/gmap_pin.webp', // カスタムピン画像のパスを指定
+                scaledSize: new google.maps.Size(96, 96), // ピンのサイズを指定（ピクセル単位）
+                anchor: new google.maps.Point(48, 48) // 画像の中心点を基準点として設定（width/2, height/2）
+            }
+        });
+    }
+    </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUhVDUQZmDc_InQxsFiaT0LB-aXiU0Sts&callback=initMap"></script>
 </body>
 </html>
