@@ -86,7 +86,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
                     <!-- 記事loopエリアstart -->
                     <dl class="info-dl">
                         <dt class="info-dt"><?php the_time('Y/m/d'); ?></dt>
-                        <dd class="info-dd"><a href="/bunkyosengoku/information/single.php?pid=<?php the_ID(); ?>"><?php the_title(); ?></a></dd>
+                        <dd class="info-dd"><a href="<?php the_permalink(); ?>" target="_blank"><?php the_title(); ?></a></dd>
                     </dl><!-- 記事loopエリアend -->
     
                     <?php endforeach; wp_reset_postdata(); ?>
@@ -96,7 +96,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
                         <dd class="info-dd">プロジェクトホームページを公開しました。</dd>
                     </dl> -->
                 </div>
-                <div class="info-gotomore"><a href="./information/" target="_blank">more >></a></div>
+                <div class="info-gotomore"><a href="/news/news_cat/setagayaakatsutsumi_ch/" target="_blank">more >></a></div>
             </div>
 		</div><!-- /.inner -->
 	</section><!-- /.info -->
@@ -129,7 +129,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 				<?php foreach($myposts as $post): setup_postdata( $post );//ループの開始 ?>
 
 				<li class="blog-item">
-					<a href="./blog/single.php?pid=<?php the_ID(); ?>">
+					<a href="<?php the_permalink(); ?>" target="_blank">
 						<figure class="blog-img"><?php the_post_thumbnail('news_thumb'); ?></figure>
 						<p class="blog-itit"><?php the_title(); ?></p>
 						<p class="blog-date"><?php the_time('Y.m.d'); ?></p>
@@ -138,7 +138,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 
 				<?php endforeach; wp_reset_postdata(); ?>
 			</ul>
-			<div class="blog-gotomore"><a href="/blog/">VIEW MORE</a></div>
+			<div class="blog-gotomore"><a href="/blog/blog_cat/setagayaakatsutsumi_ch/" target="_blank">VIEW MORE</a></div>
 		</div><!-- /.inner -->
 	</section><!-- /.blog -->
 	<?php endif; ?>
@@ -302,7 +302,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 			<ul class="interview-list">
 				<?php foreach($myposts as $post): setup_postdata($post); ?>
 				<li class="interview-item">
-					<a href="./interview/single.php?pid=<?php the_ID(); ?>">
+					<a href="<?php the_permalink(); ?>" target="_blank">
 						<figure class="interview-img"><?php the_post_thumbnail('news_thumb'); ?></figure>
 						<p class="interview-itit"><?php the_title(); ?></p>
 					</a>
