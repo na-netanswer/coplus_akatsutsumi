@@ -53,7 +53,7 @@ h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bw
     function initMap() {
         const location = { lat: 35.65817865492579, lng: 139.64216115462983 }; // 世田谷赤堤の座標
         const map = new google.maps.Map(document.getElementById('gmap'), {
-            zoom: 15,
+            zoom: 16,
             center: location,
             minZoom: 13,
             maxZoom: 18
