@@ -51,24 +51,46 @@ h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bw
 <script src="<?php echo ASSETS_DIR; ?>js/main.js"></script>
 <script>
     function initMap() {
-        const location = { lat: 35.65817865492579, lng: 139.64216115462983 }; // 世田谷赤堤の座標
+        const location = { lat: 35.65817865492579, lng: 139.64216115462983 };
         const map = new google.maps.Map(document.getElementById('gmap'), {
             zoom: 16,
             center: location,
             minZoom: 13,
             maxZoom: 18
         });
+
+        // ズームレベルに応じたピンサイズを計算する関数
+        function calculatePinSize(zoomLevel) {
+            const baseSize = 96; // 基準となるサイズ
+            const scale = Math.pow(1.4, zoomLevel - 16); // 16をベースにスケールを計算
+            return Math.round(baseSize * scale);
+        }
+
+        // マーカーを作成
         const marker = new google.maps.Marker({
             position: location,
             map: map,
             icon: {
-                url: '/setagayaakatsutsumi_ch/assets/img/common/gmap_pin.webp', // カスタムピン画像のパスを指定
-                scaledSize: new google.maps.Size(96, 96), // ピンのサイズを指定（ピクセル単位）
-                anchor: new google.maps.Point(48, 48) // 画像の中心点を基準点として設定（width/2, height/2）
+                url: '/setagayaakatsutsumi_ch/assets/img/common/gmap_pin.webp',
+                scaledSize: new google.maps.Size(96, 96),
+                anchor: new google.maps.Point(48, 48)
             }
         });
+
+        // ズーム変更時のイベントリスナー
+        map.addListener('zoom_changed', () => {
+            const currentZoom = map.getZoom();
+            const newSize = calculatePinSize(currentZoom);
+            const anchor = newSize / 2;
+            
+            marker.setIcon({
+                url: '/setagayaakatsutsumi_ch/assets/img/common/gmap_pin.webp',
+                scaledSize: new google.maps.Size(newSize, newSize),
+                anchor: new google.maps.Point(anchor, anchor)
+            });
+        });
     }
-    </script>
+</script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUhVDUQZmDc_InQxsFiaT0LB-aXiU0Sts&callback=initMap"></script>
 </body>
 </html>
