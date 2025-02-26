@@ -117,6 +117,11 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 				</dl>
 				<dl class="info-def">
 					<dt class="info-dtit">◆コーディネイト</dt>
+					<dd class="info-data">株式会社コプラス　宅地建物取引業 東京都知事（4）第83563号<br>
+					東京都渋谷区南平台町16番29号 グリーン南平台ビル5Ｆ　TEL：<a href="tel:03-5784-4126">03-5784-4126</a></dd>
+				</dl>
+				<dl class="info-def">
+					<dt class="info-dtit">◆設計・監理</dt>
 					<dd class="info-data">株式会社アルコデザインスタジオ（予定）</dd>
 				</dl>
 				<dl class="info-def">
