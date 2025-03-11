@@ -6,6 +6,8 @@ import headerScroll from "./module/headerScroll";
 import showNav from "./module/showNav";
 import splideInit from "./module/splideInit";
 import fadeInmenu from "./module/fadeInmenu";
+import switchTabByParam from "./module/switchTabByParam";
+import switchTab from "./module/switchTab";
 import "../scss/style.scss";
 import "yakuhanjp";
 
@@ -25,8 +27,10 @@ window.addEventListener('load', () => {
     }
 });
 
-showNav();
+// showNav();
 // headerScroll();
 splideInit();
 smoothScroll();
 fadeInmenu();
+switchTabByParam();
+switchTab();

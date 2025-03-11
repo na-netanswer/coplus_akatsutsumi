@@ -1,0 +1,514 @@
+/*******************************************
+    design
+*******************************************/
+@use "sass:math";
+@use "../global" as g;
+
+#plan {
+
+/*------------------------------------------
+	mixin
+------------------------------------------*/
+//plan 物件情報のリスト部分
+@mixin info-item{
+	width: 100%;
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid g.color('key');
+	color: g.color('key');
+	line-height: 1.2;
+	
+	@include g.mq('sm') {
+		margin-bottom: 10px;
+		margin-right: 0;
+	}
+			
+	&::before{
+		display: inline-block;
+		width: 128px;
+		font-size: 1.4rem;
+		font-family: g.font('en');
+		
+		@include g.mq('sm') {
+			width: 100px;
+			font-size: 1.2rem;
+		}
+	}
+}
+
+/*------------------------------------------
+	tab
+------------------------------------------*/
+.tab{
+	$this: &;
+
+	&-list{
+		display: flex;
+		justify-content: center;
+		margin-left: -45px;
+		margin-bottom: 55px;
+		
+		@include g.mq('sm') {
+			margin-left: 0;
+			margin-bottom: 20px;
+		}
+	}
+
+	&-item{
+		position: relative;
+		width: calc(100% / 3);
+		margin-left: 45px;
+		padding: 15px 58px 15px 10px;
+		border: 1px solid g.color('key');
+		font-size: 1.6rem;
+		font-family: g.font('en');
+		font-weight: bold;
+		text-align: center;
+		color: g.color('key');
+		transition: .4s;
+		cursor: pointer;
+		
+		@include g.mq('sm') {
+			margin-left: 0;
+			width: calc(100% / 2);
+			padding: 10px 30px 10px 10px;
+			font-size: 1.0rem;
+			border-left: none;
+			
+			&:first-child{
+				border-left: 1px solid g.color('key');
+			}
+		}
+
+		&:hover{
+			opacity: 0.6;
+		}
+		
+		&::after{
+			content: url(../img/common/icon_next_brown.svg);
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 58px;
+			margin: auto;
+			width: 16px;
+			height: 16px;
+			line-height: 0;
+
+			@include g.mq('sm') {
+				right: 10px;
+			}
+		}
+		
+		&._active{
+			display: block;
+			color: #FFF;
+			background: g.color('key');
+
+			&::after{
+				content: url(../img/common/icon_next.svg);
+			}
+		}
+	}
+
+	&-contsitem{
+		display: none;
+
+		&._show{
+			display: block;
+		}
+	}
+
+	&-txt {
+		margin-bottom: 25px;
+		font-weight: bold;
+		text-align: center;
+
+		a{
+			display: inline-block;
+			padding: 5px 15px;
+			border-bottom: 1px solid #604c3f;
+		}
+	}
+}
+
+
+/*------------------------------------------
+	ユニットタイトル
+------------------------------------------*/
+.unit{
+	position: relative;
+	margin-bottom: 136px;
+	
+	@include g.mq('sm') {
+		margin-bottom: 20px;
+	}
+
+    img{
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        
+        @include g.mq('sm') {
+            max-height: 100%;
+        }
+    }
+
+	&-tit{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+		font-size: 3.2rem;
+		font-weight: bold;
+		font-family: g.font('en');
+		color: #FFF;
+		letter-spacing: 5px;
+		text-shadow: 0px 0px 8px rgba(0,0,0,0.4);
+		
+		@include g.mq('sm') {
+			font-size: 1.9rem;
+		}
+	}
+}
+
+
+/*------------------------------------------
+	info
+------------------------------------------*/
+.info{
+	$this: &;
+
+	&-area{
+		margin-bottom: 100px;
+			
+		@include g.mq('sm') {
+			margin-bottom: 40px;
+		}
+
+        .a-free_01 &{
+            margin-bottom: 80px;
+        }
+
+		&._bottom{
+			padding-bottom: 100px;
+			border-bottom: 1px solid g.color('key');
+			
+			@include g.mq('sm') {
+				padding-bottom: 50px;
+			}
+		}
+	}
+
+    &-plantit{
+        font-size: 3.8rem;
+        text-align: center;
+        font-weight: normal;
+        letter-spacing: 0.5em;
+        margin-bottom: 50px;
+
+        @include g.mq('sm') {
+			margin-bottom: 25px;
+            font-size: 1.9rem;
+        }
+    }
+
+	&-box{
+		display: flex;
+        gap: 40px;
+		margin-bottom: 90px;
+		
+		@include g.mq('lg_max') {
+			flex-direction: column;
+		}
+		
+		@include g.mq('sm') {
+			margin-bottom: 25px;
+			gap: 20px;
+		}
+	}
+
+	&-unit{
+
+		@include g.mq('sm') {
+			border-bottom: 1px solid g.color('key');
+		}
+
+		&:nth-of-type(1){
+			flex-grow: 1;
+			@include g.mq('sm') {
+				width: 100%;
+			}
+		}
+
+		&:nth-of-type(2){
+			margin: 0 auto;
+		}
+
+		#{$this}-pic{
+			text-align: center;
+
+			@include g.mq('sm') {
+				margin-bottom: 25px;
+			}
+		}
+	}
+
+	&-tit{
+		display: flex;
+		align-items: center;
+		font-weight: bold;
+		font-family: g.font('en');
+		color: g.color('key');
+		padding-bottom: 15px;
+		margin-bottom: 60px;
+		border-bottom: 1px solid g.color('key');
+		font-size: 2.4rem;
+		
+		@include g.mq('sm') {
+			display: block;
+			padding-bottom: 5px;
+			margin-bottom: 25px;
+			font-size: 2.1rem;
+		}
+
+		span{
+			margin-left: 20px;
+			font-size: 1.5rem;
+			font-weight: normal;
+			font-family: g.font('base');
+			color: #000;
+			
+			@include g.mq('sm') {
+				display: block;
+				font-size: 1.0rem;
+				margin-left: 0;
+			}
+		}
+
+        .a-free_01 &{
+            margin-bottom: 90px;
+        }
+	}
+
+	&-catchcopy{
+		margin-bottom: 35px;
+		font-size: 3.2rem;
+		font-weight: bold;
+		font-family: g.font('mincho');
+		letter-spacing: 10px;
+		color: g.color('key');
+		
+		@include g.mq('sm') {
+			font-size: 1.9rem;
+			margin-bottom: 15px;
+			letter-spacing: 5px;
+		}
+	}
+
+	&-list{
+		&.is-info{
+			width: 470px;
+			flex: 0 0 auto;
+
+			@include g.mq('sm') {
+				width: 100%;
+			}
+		}
+	}
+
+	&-item{
+
+		&._square{
+			padding-left: 35px;
+			text-indent: -35px;
+            margin-bottom: 25px;
+			font-size: 1.5rem;
+			color: #231815;
+			
+			@include g.mq('sm') {
+				padding-left: calc(1em + 10px);
+				text-indent: calc(-1em + -10px);
+				font-size: 1.2rem;
+			}
+
+			&::before{
+				content: '□';
+				margin-right: 20px;
+				
+				@include g.mq('sm') {
+					margin-right: 10px;
+				}
+			}
+		}
+
+		&._price{
+            @include info-item;
+            position: relative;
+			font-size: 5.2rem;
+			
+			@include g.mq('sm') {
+				font-size: 4.0rem;
+			}
+
+			.is-middle{
+				font-size: 2.5rem;
+				margin-left: 5px;
+				
+				@include g.mq('sm') {
+					font-size: 1.5rem;
+				}
+			}
+
+			.is-small{
+				font-size: 1.8rem;
+				
+				@include g.mq('sm') {
+					font-size: 1.3rem;
+				}
+			}
+			
+			&::before{
+				content: '取得目安価格';
+                font-family: g.font('base');
+                font-weight: bold;
+            }
+		}
+
+		&._area{
+			@include info-item;
+			font-size: 2.4rem;
+			
+			@include g.mq('sm') {
+				font-size: 1.8rem;
+			}
+			
+			span{
+				font-size: 1.8rem;
+				
+				@include g.mq('sm') {
+					font-size: 1.4rem;
+				}
+			}
+			
+			&::before{
+				content: 'AREA';
+			}
+		}
+
+		&._floor{
+			@include info-item;
+			font-size: 1.8rem;
+			
+			@include g.mq('sm') {
+				font-size: 1.4rem;
+			}
+			
+			&::before{
+				content: 'FLOOR';
+			}
+		}
+	}
+
+	&-free-pic{
+		text-align: center;
+		.is-c &{
+			text-align: right;
+		}
+	}
+
+	&-pic{
+		display: flex;
+		justify-content: center;
+		gap: 60px;
+		
+		@include g.mq('sm') {
+			flex-direction: column;
+		}
+
+		&-madori{
+			text-align: center;
+			flex-grow: 1;
+		}
+
+		&-img{
+			flex: 0 0 auto;
+			margin-left: auto;
+			
+			@include g.mq('sm') {
+				margin-left: 0;
+				text-align: center;
+			}
+		}
+	}
+}
+
+/*------------------------------------------
+	スライダー
+------------------------------------------*/
+.slider{
+    margin-top: 70px;
+
+    @include g.mq('sm') {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        margin-top: 30px;
+        transform: translateX(-50%);
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+
+/*------------------------------------------
+	remarks
+------------------------------------------*/
+.remarks{
+	margin-top: 60px;
+	margin-bottom: 100px;
+	font-size: 1.5rem;
+	
+	@include g.mq('sm') {
+		font-size: 1.0rem;
+		margin-top: 30px;
+		margin-bottom: 50px;
+	}
+
+	.is-big{
+		font-size: 1.6rem;
+		font-weight: bold;
+		margin-bottom: 20px;
+		
+		@include g.mq('sm') {
+			font-size: 1.2rem;
+		}
+
+		span{
+			border-bottom: 1px solid #604C3F;
+		}
+	}
+}
+
+/*------------------------------------------
+	予告
+------------------------------------------*/
+.yokoku {
+	margin-bottom: 50px;
+	font-size: 1.8rem;
+	text-align: center;
+
+	@include g.mq('md') {
+		font-size: 2.4rem;
+	}
+}
+
+}
+

@@ -36,6 +36,16 @@
 			background-color: g.color('white');
 		}
 	}
+
+	&__arrow{
+        display: none;
+		background-color: transparent;
+        
+        @include g.mq('sm') {
+            display: block;
+            width: 1em;
+        }
+	}
 }
 
 

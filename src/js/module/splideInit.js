@@ -9,20 +9,24 @@ const splideInit = () => {
 
     var elms = document.getElementsByClassName('splide');
     if (elms.length > 0) {
-        // var bodyClass = document.body.className;
         var bodyId = document.body.id;
 
-        if (bodyId.includes('top')) {
-            for ( var i = 0; i < elms.length; i++ ) {
+        if (bodyId.includes('plan')) { // プランページ
+            for (var i = 0; i < elms.length; i++) {
                 let slideCount = elms[i].querySelectorAll('.splide__slide').length;
                 let options = {
-                    type     : 'loop',
-                    perPage: 1.5,
-                    focus    : 'center',
-                    gap: '10px',
+                    type: 'slide',
+                    perPage: 3,
+                    gap: '30px',
                     pagination: false,
+                    breakpoints: {
+                        767: {  // スマホ表示時
+                            type: 'loop',
+                            perPage: 1,
+                        },
+                    }
                 };
-                new Splide( elms[ i ], options ).mount();
+                new Splide(elms[i], options).mount();
             }
         }
     }

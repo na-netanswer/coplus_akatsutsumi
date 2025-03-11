@@ -219,38 +219,6 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 	</section>
 
 	<?php /*
-	<section class="slider">
-		<div class="ly_inner is_pc">
-			<div class="slider-tit"><h2>IMAGE MODEL</h2></div>
-			<div class="splide">
-				<div class="splide__arrows">
-					<button class="splide__arrow splide__arrow--prev">
-						<img src="<?php echo ASSETS_DIR; ?>img/common/slide_icon_prev.svg" alt="prev" width="40" height="40">
-					</button>
-					<button class="splide__arrow splide__arrow--next">
-						<img src="<?php echo ASSETS_DIR; ?>img/common/slide_icon_next.svg" alt="next" width="40" height="40">
-					</button>
-				</div>
-
-				<div class="splide__track">
-					<ul class="splide__list mv-sub__list">
-						<li class="splide__slide mv-sub__item">
-							<img src="<?php echo ASSETS_DIR; ?>img/top/slider_01.webp" alt="" width="960" height="550">
-						</li>
-						<li class="splide__slide mv-sub__item">
-							<img src="<?php echo ASSETS_DIR; ?>img/top/slider_02.webp" alt="" width="960" height="550">
-						</li>
-						<li class="splide__slide mv-sub__item">
-							<img src="<?php echo ASSETS_DIR; ?>img/top/slider_02.webp" alt="" width="960" height="550">
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div><!-- /.inner -->
-	</section>
-	*/ ?>
-
-	<?php /*
 	<section class="interview">
         <div class="interview-tit">
             <h2>INTERVIEW</h2>

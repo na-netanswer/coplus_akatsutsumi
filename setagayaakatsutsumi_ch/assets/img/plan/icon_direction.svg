@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.09 50.85">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #53493b;
+        stroke-width: .32px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #53493b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke-width: 1.27px;
+      }
+    </style>
+  </defs>
+  <g id="_Aunit" data-name="★Aunit">
+    <g>
+      <path class="cls-2" d="m39.46,30.8c0,10.72-8.69,19.41-19.41,19.41S.63,41.52.63,30.8,9.33,11.39,20.05,11.39s19.41,8.69,19.41,19.41Z"/>
+      <line class="cls-2" x1="20.05" y1="30.8" x2="17.37" y2="11.57"/>
+      <path class="cls-1" d="m18.64,7.88h-.84l-2.46-4.06c-.52-.86-1.01-1.72-1.39-2.57h-.04c.07.99.08,1.89.08,3.23v3.4h-.79V.16h.88l2.49,4.06c.55.92.99,1.72,1.35,2.52h.02c-.08-1.08-.1-2.01-.1-3.22V.16h.8v7.72Z"/>
+    </g>
+  </g>
+</svg>

@@ -2,7 +2,7 @@
 	<nav class="gnav _pc">
 		<ul class="gnav-list">
 			<li class="gnav-item"><a href="<?php echo ($page_id === 'top') ? '#concept' : ROOT_DIR.'#concept'; ?>">CONCEPT<span>コンセプト</span></a></li>
-			<li class="gnav-item is-no"><a href="<?php echo ROOT_DIR; ?>plan/">PLAN<span>プラン</span></a></li>
+			<li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>plan/">PLAN<span>プラン</span></a></li>
 			<li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>location/">LOCATION<span>ロケーション</span></a></li>
 			<li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>access/">ACCESS<span>交通アクセス</span></a></li>
 			<li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>outline/">OUTLINE<span>物件概要</span></a></li>
@@ -31,7 +31,7 @@
         </div>
         <ul class="gnav-list header_expand">
 			<li class="gnav-item"><a href="<?php echo ($page_id === 'top') ? '#concept' : ROOT_DIR.'#concept'; ?>">コンセプト</a></li>
-			<li class="gnav-item is-no"><a href="<?php echo ROOT_DIR; ?>plan/">プラン</a></li>
+			<li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>plan/">プラン</a></li>
             <li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>location/">ロケーション</a></li>
             <li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>access/">交通アクセス</a></li>
             <li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>outline/">物件概要</a></li>

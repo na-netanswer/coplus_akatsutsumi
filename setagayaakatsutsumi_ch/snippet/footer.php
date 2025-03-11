@@ -51,7 +51,7 @@ h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bw
 <script src="<?php echo ASSETS_DIR; ?>js/main.js"></script>
 <script>
     function initMap() {
-        const location = { lat: 35.65817865492579, lng: 139.64216115462983 };
+        const location = { lat: 35.65833, lng: 139.64215 };
         const map = new google.maps.Map(document.getElementById('gmap'), {
             zoom: 16,
             center: location,
@@ -62,7 +62,7 @@ h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bw
         // ズームレベルに応じたピンサイズを計算する関数
         function calculatePinSize(zoomLevel) {
             const baseSize = 96; // 基準となるサイズ
-            const scale = Math.pow(1.4, zoomLevel - 16); // 16をベースにスケールを計算
+            const scale = Math.pow(2.18, zoomLevel - 16); // 16をベースにスケールを計算
             return Math.round(baseSize * scale);
         }
 
