@@ -32,5 +32,5 @@ window.addEventListener('load', () => {
 splideInit();
 smoothScroll();
 fadeInmenu();
-switchTabByParam();
-switchTab();
+// switchTabByParam();
+// switchTab();

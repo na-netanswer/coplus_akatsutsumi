@@ -146,12 +146,12 @@
 
     img{
         width: 100%;
-        max-height: 400px;
+        /* max-height: 400px;
         object-fit: cover;
         
         @include g.mq('sm') {
             max-height: 100%;
-        }
+        } */
     }
 
 	&-tit{
@@ -211,6 +211,7 @@
         font-weight: normal;
         letter-spacing: 0.5em;
         margin-bottom: 50px;
+		font-family: g.font('mincho');
 
         @include g.mq('sm') {
 			margin-bottom: 25px;
@@ -476,6 +477,26 @@
             width: 100%;
         }
     }
+
+	.splide__arrow{
+		opacity: 1;
+		
+		@include g.mq('sm') {
+			width: 3em;
+			height: 3em;
+		}
+
+	}
+
+	.splide__arrow--prev{
+		@include g.mq('sm') {
+		}
+	}
+
+	.splide__arrow--next{
+		@include g.mq('sm') {
+		}
+	}
 }
 
 

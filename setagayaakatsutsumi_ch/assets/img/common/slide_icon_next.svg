@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" width="15.93" height="26.2" viewBox="0 0 15.93 26.2">
+<svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" width="41" height="51" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41 51">
   <defs>
     <style>
       .cls-1 {
         fill: none;
+        filter: url(#outer-glow-1);
         stroke: #fff;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 4px;
       }
     </style>
+    <filter id="outer-glow-1" x="0" y="0" width="41" height="51" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="4"/>
+      <feFlood flood-color="#000" flood-opacity=".35"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
   </defs>
   <g id="design">
-    <polyline class="cls-1" points="2 2 13.1 13.1 2 24.2"/>
+    <polyline class="cls-1" points="14.23 14.78 25.33 25.88 14.23 36.98"/>
   </g>
 </svg>

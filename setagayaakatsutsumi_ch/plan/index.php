@@ -32,24 +32,23 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 	<?php if ($publish) : ?>
 	<!-- tab -->
 	<section class="tab">
-		<div class="ly_inner is_small">
-			<ul class="tab-list">
-				<li class="tab-item is-a _active">A-UNIT PLAN</li>
-				<li class="tab-item is-c">C-UNIT PLAN</li>
-			</ul>
-		</div>
-		<!-- /.ly_inner -->
 		<ul class="tab-contslist">
 			<li class="tab-contsitem is-a _show">
-					<section class="unit">
-						<figure class="unit-pic">
-							<picture>
-								<source media="(max-width: 767px)" srcset="<?php echo ASSETS_DIR; ?>img/plan/a-unit_head_sp.webp">
-								<img src="<?php echo ASSETS_DIR; ?>img/plan/a-unit_head_pc.webp" alt="A-UNIT" width="1280" height="400">
-							</picture>
-						</figure>
-						<p class="unit-tit">A-UNIT</p>
-					</section>
+				<div class="ly_inner is_small">
+					<ul class="tab-list">
+						<li class="tab-item is-a _active"><a href="#a">A-UNIT PLAN</a></li>
+						<li class="tab-item is-c"><a href="#c">C-UNIT PLAN</a></li>
+					</ul>
+				</div>
+				<section id="a" class="unit">
+					<figure class="unit-pic">
+						<picture>
+							<source media="(max-width: 767px)" srcset="<?php echo ASSETS_DIR; ?>img/plan/a-unit_head_sp.webp">
+							<img src="<?php echo ASSETS_DIR; ?>img/plan/a-unit_head_pc.webp" alt="A-UNIT" width="1280" height="400">
+						</picture>
+					</figure>
+					<p class="unit-tit">A-UNIT</p>
+				</section>
 
 				<div class="ly_inner is_small">
 					<section class="info">
@@ -99,7 +98,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 									</ul>
 								</div>
 								<ul class="info-list is-info">
-									<li class="info-item _price">7,000<span class="is-middle">万円台後半</span><span class="is-small">（予定）</span></li>
+									<!-- <li class="info-item _price">7,000<span class="is-middle">万円台後半</span><span class="is-small">（予定）</span></li> -->
 									<li class="info-item _area">63.25<span>㎡ （19.13坪)</span></li>
 									<li class="info-item _floor">1F / 3LDK</li>
 								</ul>
@@ -114,17 +113,22 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 
 				</div>
 			</li>
-			<li class="tab-contsitem is-c">
-					<section class="unit">
-						<figure class="unit-pic">
-							<picture>
-								<source media="(max-width: 767px)" srcset="<?php echo ASSETS_DIR; ?>img/plan/c-unit_head_sp.webp">
-								<img src="<?php echo ASSETS_DIR; ?>img/plan/c-unit_head_pc.webp" alt="C-UNIT" width="1280" height="400">
-							</picture>
-						</figure>
-						<p class="unit-tit">C-UNIT</p>
-					</section>
-
+			<li class="tab-contsitem is-c _show">
+				<div class="ly_inner is_small">
+					<ul class="tab-list">
+						<li class="tab-item is-a"><a href="#a">A-UNIT PLAN</a></li>
+						<li class="tab-item is-c _active"><a href="#c">C-UNIT PLAN</a></li>
+					</ul>
+				</div>
+				<section id="c" class="unit">
+					<figure class="unit-pic">
+						<picture>
+							<source media="(max-width: 767px)" srcset="<?php echo ASSETS_DIR; ?>img/plan/c-unit_head_sp.webp">
+							<img src="<?php echo ASSETS_DIR; ?>img/plan/c-unit_head_pc.webp" alt="C-UNIT" width="1280" height="400">
+						</picture>
+					</figure>
+					<p class="unit-tit">C-UNIT</p>
+				</section>
 				<div class="ly_inner is_small">
 					<section class="info">
 						<h2 id="c-free_01" class="info-tit">C-UNIT FREE PLAN<span>フリープラン（コーディネーター提案例）</span></h2>
@@ -174,7 +178,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 									</ul>
 								</div>
 								<ul class="info-list is-info">
-									<li class="info-item _price">9,000<span class="is-middle">万円台後半</span><span class="is-small">（予定）</span></li>
+									<!-- <li class="info-item _price">9,000<span class="is-middle">万円台後半</span><span class="is-small">（予定）</span></li> -->
 									<li class="info-item _area">73.23<span>㎡ （22.15坪)</span></li>
 									<li class="info-item _floor">1F／2LDK+S</li>
 								</ul>
