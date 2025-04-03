@@ -55,58 +55,67 @@
 	}
 
 	&-item{
-		position: relative;
 		width: calc(100% / 3);
-		margin-left: 45px;
-		padding: 15px 58px 15px 10px;
-		border: 1px solid g.color('key');
-		font-size: 1.6rem;
-		font-family: g.font('en');
-		font-weight: bold;
-		text-align: center;
-		color: g.color('key');
-		transition: .4s;
-		cursor: pointer;
-		
+
 		@include g.mq('sm') {
-			margin-left: 0;
 			width: calc(100% / 2);
-			padding: 10px 30px 10px 10px;
-			font-size: 1.0rem;
-			border-left: none;
+		}
+
+		a{
+			display: block;
+			position: relative;
+			margin-left: 45px;
+			padding: 15px 58px 15px 10px;
+			border: 1px solid g.color('key');
+			font-size: 1.6rem;
+			font-family: g.font('en');
+			font-weight: bold;
+			text-align: center;
+			color: g.color('key');
+			transition: .4s;
+			cursor: pointer;
 			
-			&:first-child{
-				border-left: 1px solid g.color('key');
-			}
-		}
-
-		&:hover{
-			opacity: 0.6;
-		}
-		
-		&::after{
-			content: url(../img/common/icon_next_brown.svg);
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			right: 58px;
-			margin: auto;
-			width: 16px;
-			height: 16px;
-			line-height: 0;
-
 			@include g.mq('sm') {
-				right: 10px;
+				margin-left: 0;
+				padding: 10px 30px 10px 10px;
+				font-size: 1.0rem;
+				border-left: none;
+				
+				&:first-child{
+					border-left: 1px solid g.color('key');
+				}
+			}
+	
+			&:hover{
+				opacity: 0.6;
+			}
+			
+			&::after{
+				content: url(../img/common/icon_next_brown.svg);
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 58px;
+				margin: auto;
+				width: 16px;
+				height: 16px;
+				line-height: 0;
+	
+				@include g.mq('sm') {
+					right: 10px;
+				}
 			}
 		}
 		
 		&._active{
-			display: block;
-			color: #FFF;
-			background: g.color('key');
-
-			&::after{
-				content: url(../img/common/icon_next.svg);
+			a{
+				display: block;
+				color: #FFF;
+				background: g.color('key');
+	
+				&::after{
+					content: url(../img/common/icon_next.svg);
+				}
 			}
 		}
 	}
@@ -116,6 +125,16 @@
 
 		&._show{
 			display: block;
+		}
+
+		&.is-c{
+			.info-pic-madori{
+				img{
+					@include g.mq('sm') {
+						width: 230px;
+					}
+				}
+			}
 		}
 	}
 

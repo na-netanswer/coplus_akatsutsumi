@@ -100,7 +100,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 								<ul class="info-list is-info">
 									<!-- <li class="info-item _price">7,000<span class="is-middle">万円台後半</span><span class="is-small">（予定）</span></li> -->
 									<li class="info-item _area">63.25<span>㎡ （19.13坪)</span></li>
-									<li class="info-item _floor">1F / 3LDK</li>
+									<li class="info-item _floor">1F / 2LDK+S</li>
 								</ul>
 							</div>
 							
