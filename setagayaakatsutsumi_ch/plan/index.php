@@ -98,7 +98,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 									</ul>
 								</div>
 								<ul class="info-list is-info">
-									<!-- <li class="info-item _price">7,000<span class="is-middle">万円台後半</span><span class="is-small">（予定）</span></li> -->
+									<li class="info-item _price">8,190<span class="is-middle">万円<!-- 台後半</span><span class="is-small">（予定）</span> --></li>
 									<li class="info-item _area">63.25<span>㎡ （19.13坪)</span></li>
 									<li class="info-item _floor">1F / 2LDK+S</li>
 								</ul>
@@ -178,7 +178,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 									</ul>
 								</div>
 								<ul class="info-list is-info">
-									<!-- <li class="info-item _price">9,000<span class="is-middle">万円台後半</span><span class="is-small">（予定）</span></li> -->
+									<li class="info-item _price">9,740<span class="is-middle">万円<!-- 台後半</span><span class="is-small">（予定）</span> --></li>
 									<li class="info-item _area">73.23<span>㎡ （22.15坪)</span></li>
 									<li class="info-item _floor">1F／2LDK+S</li>
 								</ul>
