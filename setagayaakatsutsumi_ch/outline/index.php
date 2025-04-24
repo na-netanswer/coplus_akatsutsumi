@@ -76,8 +76,8 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 					<dd class="info-data">311.09㎡</dd>
 				</dl>
 				<dl class="info-def">
-					<dt class="info-dtit">◆延床面積</dt>
-					<dd class="info-data">882.57㎡</dd>
+					<dt class="info-dtit">◆専有面積</dt>
+					<dd class="info-data">882.61㎡（予定）</dd>
 				</dl>
 				<dl class="info-def">
 					<dt class="info-dtit">◆構造・規模</dt>
@@ -101,7 +101,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 				<h3 class="info-deftit">≪スケジュール（予定）≫</h3>
 				<dl class="info-def">
 					<dt class="info-dtit">◆募集時期</dt>
-					<dd class="info-data">2025年3月予定（先着順申込）</dd>
+					<dd class="info-data">2025年4月（先着順申込）</dd>
 				</dl>
 				<dl class="info-def">
 					<dt class="info-dtit">◆土地引渡時期</dt>
@@ -109,7 +109,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 				</dl>
 				<dl class="info-def">
 					<dt class="info-dtit">◆建物引渡時期</dt>
-					<dd class="info-data">2027年6月予定</dd>
+					<dd class="info-data">2027年8月予定</dd>
 				</dl>
 				<dl class="info-def">
 					<dt class="info-dtit">◆土地売主</dt>
@@ -117,7 +117,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 				</dl>
 				<dl class="info-def">
 					<dt class="info-dtit">◆コーディネイト</dt>
-					<dd class="info-data">株式会社コプラス　宅地建物取引業 東京都知事（4）第83563号<br>
+					<dd class="info-data">株式会社コプラス　宅地建物取引業 東京都知事（5）第83563号<br>
 					東京都渋谷区南平台町16番29号 グリーン南平台ビル5Ｆ　TEL：<a href="tel:03-5784-4126">03-5784-4126</a></dd>
 				</dl>
 				<dl class="info-def">
