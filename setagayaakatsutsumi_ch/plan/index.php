@@ -38,6 +38,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 					<ul class="tab-list">
 						<li class="tab-item is-a _active"><a href="#a">A-UNIT PLAN</a></li>
 						<li class="tab-item is-c"><a href="#c">C-UNIT PLAN</a></li>
+						<li class="tab-item is-f"><a href="#f">F-UNIT PLAN</a></li>
 					</ul>
 				</div>
 				<section id="a" class="unit">
@@ -118,6 +119,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 					<ul class="tab-list">
 						<li class="tab-item is-a"><a href="#a">A-UNIT PLAN</a></li>
 						<li class="tab-item is-c _active"><a href="#c">C-UNIT PLAN</a></li>
+						<li class="tab-item is-f"><a href="#f">F-UNIT PLAN</a></li>
 					</ul>
 				</div>
 				<section id="c" class="unit">
@@ -187,6 +189,87 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 							<div class="info-pic is-basic">
 								<figure class="info-pic-madori"><img src="<?php echo ASSETS_DIR; ?>img/plan/c-unit_basic_01.webp" alt="間取り01" width="458" height="578"></figure>
 								<figure class="info-pic-img"><img src="<?php echo ASSETS_DIR; ?>img/plan/c-unit_basic_02.webp" alt="部屋位置" width="294" height="461"></figure>
+							</div>
+						</div>
+					</section>
+
+				</div>
+			</li>
+			<li class="tab-contsitem is-f _show">
+				<div class="ly_inner is_small">
+					<ul class="tab-list">
+						<li class="tab-item is-a"><a href="#a">A-UNIT PLAN</a></li>
+						<li class="tab-item is-c"><a href="#c">C-UNIT PLAN</a></li>
+						<li class="tab-item is-f _active"><a href="#f">F-UNIT PLAN</a></li>
+					</ul>
+				</div>
+				<section id="f" class="unit">
+					<figure class="unit-pic">
+						<picture>
+							<source media="(max-width: 767px)" srcset="<?php echo ASSETS_DIR; ?>img/plan/f-unit_head_sp.webp">
+							<img src="<?php echo ASSETS_DIR; ?>img/plan/f-unit_head_pc.webp" alt="F-UNIT" width="1280" height="400">
+						</picture>
+					</figure>
+					<p class="unit-tit">F-UNIT</p>
+				</section>
+				<div class="ly_inner is_small">
+					<section class="info">
+						<h2 id="f-free_01" class="info-tit">F-UNIT FREE PLAN<span>フリープラン（コーディネーター提案例）</span></h2>
+						<div class="info-area">
+							<h3 class="info-plantit">気配を感じられる、可変性のある家</h3>
+							<figure class="info-free-pic">
+								<picture>
+									<source media="(max-width: 750px)" srcset="<?php echo ASSETS_DIR; ?>img/plan/f-unit_free_sp.webp">
+									<img src="<?php echo ASSETS_DIR; ?>img/plan/f-unit_free_pc.webp" alt="" width="841" height="847">
+								</picture>
+							</figure>
+							<section class="slider">
+								<div class="splide">
+									<div class="splide__arrows">
+										<button class="splide__arrow splide__arrow--prev">
+											<img src="<?php echo ASSETS_DIR; ?>img/common/slide_icon_prev.svg" alt="prev" width="40" height="40">
+										</button>
+										<button class="splide__arrow splide__arrow--next">
+											<img src="<?php echo ASSETS_DIR; ?>img/common/slide_icon_next.svg" alt="next" width="40" height="40">
+										</button>
+									</div>
+
+									<div class="splide__track">
+										<ul class="splide__list mv-sub__list">
+											<li class="splide__slide mv-sub__item">
+												<img src="<?php echo ASSETS_DIR; ?>img/plan/f-unit_free_slide_01.webp" alt="小上り下は収納力大" width="323" height="215">
+											</li>
+											<li class="splide__slide mv-sub__item">
+												<img src="<?php echo ASSETS_DIR; ?>img/plan/f-unit_free_slide_02.webp" alt="セミオープンで家族の気配を感じる小上り" width="323" height="215">
+											</li>
+											<li class="splide__slide mv-sub__item">
+												<img src="<?php echo ASSETS_DIR; ?>img/plan/f-unit_free_slide_03.webp" alt="2ボウルの広々とした洗面台" width="323" height="215">
+											</li>
+										</ul>
+									</div>
+								</div>
+							</section>
+						</div>
+						<h2 id="f-basic" class="info-tit">F-UNIT BASIC PLAN<span>参考プラン</span></h2>
+						<div class="info-area _bottom">
+							<div class="info-box">
+								<div class="info-unit is-column">
+									<ul class="info-list">
+										<li class="info-item _square">廊下をなくし、専有面積を最大限に活かした3LDK</li>
+										<li class="info-item _square">開放感あふれる8.4mワイドスパン</li>
+										<li class="info-item _square">陽当たり良好な南向きバルコニー</li>
+									</ul>
+								</div>
+								<ul class="info-list is-info">
+									<li class="info-item _price">8,510<span class="is-middle">万円<!-- 台後半</span><span class="is-small">（予定）</span> --></li>
+									<li class="info-item _area">65.56<span>㎡ （19.83坪)</span></li>
+									<li class="info-item _floor">2F／3LDK</li>
+								</ul>
+							</div>
+							
+							<div class="info-pic is-basic">
+								<figure class="info-pic-madori"><img src="<?php echo ASSETS_DIR; ?>img/plan/f-unit_basic_01.webp" alt="間取り01" width="584" height="590"></figure>
+								<figure class="info-pic-img"><img src="<?php echo ASSETS_DIR; ?>img/plan/f-unit_basic_02.webp" alt="部屋位置" width="294" height="461"></figure>
 							</div>
 						</div>
 					</section>

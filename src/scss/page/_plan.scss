@@ -45,12 +45,16 @@
 	&-list{
 		display: flex;
 		justify-content: center;
-		margin-left: -45px;
+		margin-left: -20px;
 		margin-bottom: 55px;
 		
 		@include g.mq('sm') {
+			justify-content: flex-start;
+			flex-wrap: wrap;
 			margin-left: 0;
 			margin-bottom: 20px;
+			border-top: 1px solid g.color('key');
+			border-left: 1px solid g.color('key');
 		}
 	}
 
@@ -58,13 +62,16 @@
 		width: calc(100% / 3);
 
 		@include g.mq('sm') {
+			border-bottom: 1px solid g.color('key');
+			border-right: 1px solid g.color('key');
 			width: calc(100% / 2);
 		}
+
 
 		a{
 			display: block;
 			position: relative;
-			margin-left: 45px;
+			margin-left: 20px;
 			padding: 15px 58px 15px 10px;
 			border: 1px solid g.color('key');
 			font-size: 1.6rem;
@@ -79,11 +86,7 @@
 				margin-left: 0;
 				padding: 10px 30px 10px 10px;
 				font-size: 1.0rem;
-				border-left: none;
-				
-				&:first-child{
-					border-left: 1px solid g.color('key');
-				}
+				border: none;
 			}
 	
 			&:hover{
