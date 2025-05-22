@@ -3,7 +3,7 @@ include_once '../snippet/config.php';
 
 // meta設定
 $conf_page = array(
-    'title'         => '',
+    'title'         => 'PLAN'.SEPA.SITE_NAME,
     'desc'          => '',
     'og_title'      => '',
     'og_desc'       => '',
