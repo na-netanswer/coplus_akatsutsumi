@@ -316,11 +316,11 @@
 	info
 ------------------------------------------*/
 .info{
-    height: 160px;
-	padding-top: 20px;
-	padding-bottom: 10px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 	background: g.color('key');
     color: #FFF; 
+
     @include g.mq(sm) {
 		min-width: 100%;
         height: auto;
@@ -464,7 +464,7 @@
 				right: -7px;
 				width: 55px;
 				height: 55px;
-				background: url(../img/ico_new.svg) center center / contain no-repeat;
+				background: url(../img/common/ico_new.svg) center center / contain no-repeat;
 			}
 		}
 	}

@@ -42,6 +42,25 @@
 .tab{
 	$this: &;
 
+	&-list_head{
+		display: flex;
+		justify-content: center;
+		gap: 15px;
+		
+		@include g.mq('sm') {
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			margin-bottom: 20px;
+			gap: 5px;
+		}
+
+		img{
+			@include g.mq('sm') {
+				width: 100%;
+			}
+		}
+	}
+
 	&-list{
 		display: flex;
 		justify-content: center;
@@ -55,6 +74,12 @@
 			margin-bottom: 20px;
 			border-top: 1px solid g.color('key');
 			border-left: 1px solid g.color('key');
+		}
+
+		img{
+			@include g.mq('sm') {
+				width: 100%;
+			}
 		}
 	}
 
@@ -121,6 +146,15 @@
 				}
 			}
 		}
+	}
+
+	&-coution{
+		text-align: center;
+		font-size: 1.1rem;
+		font-weight: bold;
+		color: #878383;
+		margin-top: 10px;
+		margin-bottom: 55px;
 	}
 
 	&-contsitem{
@@ -280,14 +314,6 @@
 				margin-bottom: 25px;
 			}
 		}
-
-		&.is-column{
-			margin-top: 25px;
-
-			@include g.mq('md') {
-				margin-top: 0;
-			}
-		}
 	}
 
 	&-tit{
@@ -306,6 +332,14 @@
 			padding-bottom: 5px;
 			margin-bottom: 25px;
 			font-size: 2.1rem;
+		}
+
+		&.is-basic{
+			margin-bottom: 80px;
+
+			@include g.mq('sm') {
+				margin-bottom: 25px;
+			}
 		}
 
 		span{
@@ -346,9 +380,11 @@
 		&.is-info{
 			width: 470px;
 			flex: 0 0 auto;
-
+			margin-top: -31px;
+			
 			@include g.mq('sm') {
 				width: 100%;
+				margin-top: 0;
 			}
 		}
 	}
