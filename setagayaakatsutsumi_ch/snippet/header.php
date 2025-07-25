@@ -75,9 +75,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</picture>
 			</a>
 		</p>
-		<div class="cta-bnr hp_xl_none"><a href="http://campage.jp/cooperative/setagayaakatsutsumi_ch_surv?_fsi=8BN5Xy84&_gl=1*e6yuhf*_gcl_au*MTExNjY5MzkxNi4xNzM2OTExNDE0" target="_blank">最新情報メール<br>登録はこちら ></a></div>
+		<div class="cta-bnr hp_xl_none"><a href="https://campage.jp/cooperative/setagayaakatsutsumi_ch_setsummeikai_1" target="_blank">説明会予約は<br>こちら ></a></div>
 		<ul class="header__list hp_xl_max_none">
-			<li class="header__item is-contact"><a href="http://campage.jp/cooperative/setagayaakatsutsumi_ch_surv?_fsi=8BN5Xy84&_gl=1*e6yuhf*_gcl_au*MTExNjY5MzkxNi4xNzM2OTExNDE0" target="_blank">最新情報メール登録はこちら</a></li>
+			<li class="header__item is-contact"><a href="https://campage.jp/cooperative/setagayaakatsutsumi_ch_setsummeikai_1" target="_blank">説明会予約はこちら</a></li>
 			<li class="header__item is-instagram"><a href="https://www.instagram.com/coplus.arch/" target="_blank"><img src="<?php echo ASSETS_DIR; ?>img/common/icon_instagram.svg" alt="instagram" width="30" height="30"></a></li>
 			<li class="header__item is-facebook"><a href="https://business.facebook.com/COPLUS.inc" target="_blank"><img src="<?php echo ASSETS_DIR; ?>img/common/icon_facebook.svg" alt="facebook" width="30" height="30"></a></li>
 			<li class="header__item is-coplus"><a href="https://cooperativehouse.jp/" target="_blank"><img src="<?php echo ASSETS_DIR; ?>img/common/coplus_logo.svg" alt="coplus" width="94" height="19"></a></li>
@@ -94,7 +94,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</a>
 		</figure>
 		<div class="header__gnav-area">
-			<div class="cta-bnr hp_xl_none"><a href="http://campage.jp/cooperative/setagayaakatsutsumi_ch_surv?_fsi=8BN5Xy84&_gl=1*e6yuhf*_gcl_au*MTExNjY5MzkxNi4xNzM2OTExNDE0" target="_blank">最新情報メール<br>登録はこちら ></a></div>
+			<div class="cta-bnr hp_xl_none"><a href="https://campage.jp/cooperative/setagayaakatsutsumi_ch_setsummeikai_1" target="_blank">説明会予約は<br>こちら ></a></div>
 			<?php include(dirname(__FILE__)."/gnav.php"); ?>
 		</div>
 	</header>
