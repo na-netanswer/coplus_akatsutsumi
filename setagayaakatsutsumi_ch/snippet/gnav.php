@@ -2,9 +2,9 @@
 	<nav class="gnav _pc">
 		<ul class="gnav-list">
 			<li class="gnav-item"><a href="<?php echo ($page_id === 'top') ? '#concept' : ROOT_DIR.'#concept'; ?>">CONCEPT<span>コンセプト</span></a></li>
+			<li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>overall/">DESIGN<span>全体設計</span></a></li>
 			<li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>plan/">PLAN<span>プラン</span></a></li>
-			<li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>location/">LOCATION<span>ロケーション</span></a></li>
-			<li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>access/">ACCESS<span>交通アクセス</span></a></li>
+			<li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>location/">LOCATION<span>周辺・交通案内</span></a></li>
 			<li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>outline/">OUTLINE<span>物件概要</span></a></li>
 			<li class="gnav-item">
 				<ul class="gnav-minilist">
@@ -31,9 +31,9 @@
         </div>
         <ul class="gnav-list header_expand">
 			<li class="gnav-item"><a href="<?php echo ($page_id === 'top') ? '#concept' : ROOT_DIR.'#concept'; ?>">コンセプト</a></li>
+			<li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>overall/">全体設計</a></li>
 			<li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>plan/">プラン</a></li>
-            <li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>location/">ロケーション</a></li>
-            <li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>access/">交通アクセス</a></li>
+			<li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>location/">周辺・交通案内</a></li>
             <li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>outline/">物件概要</a></li>
             <li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>cooperative/">コーポラティブハウスとは</a></li>
             <li class="gnav-item"><a href="<?php echo ROOT_DIR; ?>design/">自由設計について</a></li>

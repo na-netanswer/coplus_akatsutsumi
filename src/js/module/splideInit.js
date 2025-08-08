@@ -11,13 +11,15 @@ const splideInit = () => {
     if (elms.length > 0) {
         var bodyId = document.body.id;
 
-        if (bodyId.includes('plan')) { // プランページ
+        if (bodyId.includes('plan') || bodyId.includes('overall')) { // プランページ
+            let gap = bodyId.includes('overall') ? '0px' : '30px';
+
             for (var i = 0; i < elms.length; i++) {
                 let slideCount = elms[i].querySelectorAll('.splide__slide').length;
                 let options = {
                     type: 'slide',
                     perPage: 3,
-                    gap: '30px',
+                    gap: gap,
                     pagination: false,
                     breakpoints: {
                         767: {  // スマホ表示時
