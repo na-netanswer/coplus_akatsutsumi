@@ -24,7 +24,7 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 	<section class="head">
 		<div class="ly_inner">
 			<div class="head__box">
-				<h1 class="tit is-head head__tit">DESIGN<span>デザイン</span></h1>
+				<h1 class="tit is-head head__tit">DESIGN<span>全体設計</span></h1>
 			</div>
 		</div>
 	</section><!-- /.head -->
