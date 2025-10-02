@@ -101,15 +101,15 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 				<h3 class="info-deftit">≪スケジュール（予定）≫</h3>
 				<dl class="info-def">
 					<dt class="info-dtit">◆募集時期</dt>
-					<dd class="info-data">2025年4月（先着順申込）</dd>
+					<dd class="info-data">先着順申込受付中</dd>
 				</dl>
 				<dl class="info-def">
 					<dt class="info-dtit">◆土地引渡時期</dt>
-					<dd class="info-data">2025年9月予定</dd>
+					<dd class="info-data">2025年11月予定</dd>
 				</dl>
 				<dl class="info-def">
 					<dt class="info-dtit">◆建物引渡時期</dt>
-					<dd class="info-data">2027年8月予定</dd>
+					<dd class="info-data">2027年10月予定</dd>
 				</dl>
 				<dl class="info-def">
 					<dt class="info-dtit">◆土地売主</dt>

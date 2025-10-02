@@ -33,13 +33,15 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 	<!-- tab -->
 	<section class="tab">
 		<ul class="tab-contslist">
-			<li class="tab-contsitem is-a _show">
+			<?php
+			/* <li class="tab-contsitem is-a _show">
 				<div class="ly_inner is_small">
 					<ul class="tab-list_head">
-						<li class="tab-item_head is-a"><a href="#a"><img src="<?php echo ASSETS_DIR; ?>img/plan/a-unit_btn.webp" alt="A-UNIT PLAN" width="248" height="121"></a></li>
+						<li class="tab-item_head is-b"><a href="#b"><img src="<?php echo ASSETS_DIR; ?>img/plan/b-unit_btn.webp" alt="B-UNIT PLAN" width="248" height="121"></a></li>
+						<li class="tab-item_head is-d"><a href="#d"><img src="<?php echo ASSETS_DIR; ?>img/plan/d-unit_btn.webp" alt="D-UNIT PLAN" width="248" height="121"></a></li>
 						<!-- <li class="tab-item_head is-c"><a href="#c"><img src="<?php echo ASSETS_DIR; ?>img/plan/c-unit_btn.webp" alt="C-UNIT PLAN" width="248" height="121"></a></li> -->
 						<li class="tab-item_head is-f"><a href="#f"><img src="<?php echo ASSETS_DIR; ?>img/plan/f-unit_btn.webp" alt="F-UNIT PLAN" width="248" height="121"></a></li>
-						<li class="tab-item_head is-n"><a href="#n"><img src="<?php echo ASSETS_DIR; ?>img/plan/n-unit_btn.webp" alt="N-UNIT PLAN" width="248" height="121"></a></li>
+						<!-- <li class="tab-item_head is-n"><a href="#n"><img src="<?php echo ASSETS_DIR; ?>img/plan/n-unit_btn.webp" alt="N-UNIT PLAN" width="248" height="121"></a></li> -->
 					</ul>
 					<p class="tab-coution">※標準プランでの目安価格です</p>
 				</div>
@@ -106,6 +108,172 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 											</li>
 											<li class="splide__slide mv-sub__item">
 												<img src="<?php echo ASSETS_DIR; ?>img/plan/a-unit_free_slide_03.webp" alt="掃除もしやすい土間キッチン" width="323" height="215">
+											</li>
+										</ul>
+									</div>
+								</div>
+							</section>
+						</div>
+					</section>
+
+				</div>
+			</li> */
+			?>
+			<li class="tab-contsitem is-b _show">
+				<div class="ly_inner is_small">
+					<ul class="tab-list_head">
+						<li class="tab-item_head is-b"><a href="#b"><img src="<?php echo ASSETS_DIR; ?>img/plan/b-unit_btn.webp" alt="B-UNIT PLAN" width="248" height="121"></a></li>
+						<li class="tab-item_head is-d"><a href="#d"><img src="<?php echo ASSETS_DIR; ?>img/plan/d-unit_btn.webp" alt="D-UNIT PLAN" width="248" height="121"></a></li>
+						<!-- <li class="tab-item_head is-c"><a href="#c"><img src="<?php echo ASSETS_DIR; ?>img/plan/c-unit_btn.webp" alt="C-UNIT PLAN" width="248" height="121"></a></li> -->
+						<li class="tab-item_head is-f"><a href="#f"><img src="<?php echo ASSETS_DIR; ?>img/plan/f-unit_btn.webp" alt="F-UNIT PLAN" width="248" height="121"></a></li>
+						<!-- <li class="tab-item_head is-n"><a href="#n"><img src="<?php echo ASSETS_DIR; ?>img/plan/n-unit_btn.webp" alt="N-UNIT PLAN" width="248" height="121"></a></li> -->
+					</ul>
+					<p class="tab-coution">※標準プランでの目安価格です</p>
+				</div>
+				<section id="b" class="unit">
+					<figure class="unit-pic">
+						<picture>
+							<source media="(max-width: 767px)" srcset="<?php echo ASSETS_DIR; ?>img/plan/b-unit_head_sp.webp">
+							<img src="<?php echo ASSETS_DIR; ?>img/plan/b-unit_head_pc.webp" alt="B-UNIT" width="1280" height="400">
+						</picture>
+					</figure>
+					<p class="unit-tit">B-UNIT</p>
+				</section>
+
+				<div class="ly_inner is_small">
+					<section class="info">
+						<h2 id="b-basic" class="info-tit is-basic">B-UNIT BASIC PLAN<span>参考プラン</span></h2>
+						<div class="info-area">
+							<div class="info-box">
+								<div class="info-unit is-column">
+									<ul class="info-list">
+										<li class="info-item _square">廊下をなくし、専有面積を最大限に活かした2LDK</li>
+										<li class="info-item _square">陽当たり良好な南向きの専用庭</li>
+									</ul>
+								</div>
+								<ul class="info-list is-info">
+									<li class="info-item _price">5,980<span class="is-middle">万円<!-- 台後半</span><span class="is-small">（予定）</span> --></li>
+									<li class="info-item _area">47.56<span>㎡ （14.38坪)</span></li>
+									<li class="info-item _floor">1F／2LDK</li>
+								</ul>
+							</div>
+							
+							<div class="info-pic is-basic">
+								<figure class="info-pic-madori"><img src="<?php echo ASSETS_DIR; ?>img/plan/b-unit_basic_01.webp" alt="間取り01" width="692" height="323"></figure>
+								<figure class="info-pic-img"><img src="<?php echo ASSETS_DIR; ?>img/plan/b-unit_basic_02.webp" alt="部屋位置" width="294" height="461"></figure>
+							</div>
+						</div>
+						<h2 id="b-free_01" class="info-tit">B-UNIT FREE PLAN<span>フリープラン（コーディネーター提案例）</span></h2>
+						<div class="info-area _bottom">
+							<h3 class="info-plantit">緑に囲まれて暮らす家</h3>
+							<figure class="info-free-pic">
+								<picture>
+									<source media="(max-width: 750px)" srcset="<?php echo ASSETS_DIR; ?>img/plan/b-unit_free_sp.webp">
+									<img src="<?php echo ASSETS_DIR; ?>img/plan/b-unit_free_pc.webp" alt="" width="1040" height="1260">
+								</picture>
+							</figure>
+							<section class="slider">
+								<div class="splide">
+									<div class="splide__arrows">
+										<button class="splide__arrow splide__arrow--prev">
+											<img src="<?php echo ASSETS_DIR; ?>img/common/slide_icon_prev.svg" alt="prev" width="40" height="40">
+										</button>
+										<button class="splide__arrow splide__arrow--next">
+											<img src="<?php echo ASSETS_DIR; ?>img/common/slide_icon_next.svg" alt="next" width="40" height="40">
+										</button>
+									</div>
+
+									<div class="splide__track">
+										<ul class="splide__list mv-sub__list">
+											<li class="splide__slide mv-sub__item">
+												<img src="<?php echo ASSETS_DIR; ?>img/plan/b-unit_free_slide_01.webp" alt="室内にいながら、緑と寄り添う土間のある空間" width="323" height="215">
+											</li>
+											<li class="splide__slide mv-sub__item">
+												<img src="<?php echo ASSETS_DIR; ?>img/plan/b-unit_free_slide_02.webp" alt="窓辺の飾り棚にも緑を" width="323" height="215">
+											</li>
+											<li class="splide__slide mv-sub__item">
+												<img src="<?php echo ASSETS_DIR; ?>img/plan/b-unit_free_slide_03.webp" alt="室内から庭へタイルがつづく、広がりを感じるテラス" width="323" height="215">
+											</li>
+										</ul>
+									</div>
+								</div>
+							</section>
+						</div>
+					</section>
+
+				</div>
+			</li>
+			<li class="tab-contsitem is-d _show">
+				<div class="ly_inner is_small">
+					<ul class="tab-list">
+						<li class="tab-item is-b"><a href="#b">B-UNIT</a></li>
+						<li class="tab-item is-d _active"><a href="#d">D-UNIT</a></li>
+						<li class="tab-item is-f"><a href="#f">F-UNIT</a></li>
+					</ul>
+				</div>
+				<section id="d" class="unit">
+					<figure class="unit-pic">
+						<picture>
+							<source media="(max-width: 767px)" srcset="<?php echo ASSETS_DIR; ?>img/plan/d-unit_head_sp.webp">
+							<img src="<?php echo ASSETS_DIR; ?>img/plan/d-unit_head_pc.webp" alt="D-UNIT" width="1280" height="400">
+						</picture>
+					</figure>
+					<p class="unit-tit">D-UNIT</p>
+				</section>
+
+				<div class="ly_inner is_small">
+					<section class="info">
+						<h2 id="d-basic" class="info-tit is-basic">D-UNIT BASIC PLAN<span>参考プラン</span></h2>
+						<div class="info-area">
+							<div class="info-box">
+								<div class="info-unit is-column">
+									<ul class="info-list">
+										<li class="info-item _square">東西南北の四面開口</li>
+										<li class="info-item _square">角部屋で戸建てのような独立性と開放感</li>
+									</ul>
+								</div>
+								<ul class="info-list is-info">
+									<li class="info-item _price">8,370<span class="is-middle">万円<!-- 台後半</span><span class="is-small">（予定）</span> --></li>
+									<li class="info-item _area">63.25<span>㎡ （19.13坪)</span></li>
+									<li class="info-item _floor">2F／3LDK</li>
+								</ul>
+							</div>
+							
+							<div class="info-pic is-basic">
+								<figure class="info-pic-madori"><img src="<?php echo ASSETS_DIR; ?>img/plan/d-unit_basic_01.webp" alt="間取り01" width="692" height="323"></figure>
+								<figure class="info-pic-img"><img src="<?php echo ASSETS_DIR; ?>img/plan/d-unit_basic_02.webp" alt="部屋位置" width="294" height="461"></figure>
+							</div>
+						</div>
+						<h2 id="d-free_01" class="info-tit">D-UNIT FREE PLAN<span>フリープラン（コーディネーター提案例）</span></h2>
+						<div class="info-area _bottom">
+							<h3 class="info-plantit">家事をしやすい、キッチンが中心の家</h3>
+							<figure class="info-free-pic">
+								<picture>
+									<source media="(max-width: 750px)" srcset="<?php echo ASSETS_DIR; ?>img/plan/d-unit_free_sp.webp">
+									<img src="<?php echo ASSETS_DIR; ?>img/plan/d-unit_free_pc.webp" alt="" width="1040" height="1260">
+								</picture>
+							</figure>
+							<section class="slider">
+								<div class="splide">
+									<div class="splide__arrows">
+										<button class="splide__arrow splide__arrow--prev">
+											<img src="<?php echo ASSETS_DIR; ?>img/common/slide_icon_prev.svg" alt="prev" width="40" height="40">
+										</button>
+										<button class="splide__arrow splide__arrow--next">
+											<img src="<?php echo ASSETS_DIR; ?>img/common/slide_icon_next.svg" alt="next" width="40" height="40">
+										</button>
+									</div>
+
+									<div class="splide__track">
+										<ul class="splide__list mv-sub__list">
+											<li class="splide__slide mv-sub__item">
+												<img src="<?php echo ASSETS_DIR; ?>img/plan/d-unit_free_slide_01.webp" alt="大容量のファミリークローゼット" width="323" height="215">
+											</li>
+											<li class="splide__slide mv-sub__item">
+												<img src="<?php echo ASSETS_DIR; ?>img/plan/d-unit_free_slide_02.webp" alt="LDK、ファミリークローゼット、洋室を回遊できる" width="323" height="215">
+											</li>
+											<li class="splide__slide mv-sub__item">
+												<img src="<?php echo ASSETS_DIR; ?>img/plan/d-unit_free_slide_03.webp" alt="コミュニケーションしやすいアイランドキッチン" width="323" height="215">
 											</li>
 										</ul>
 									</div>
@@ -226,10 +394,9 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 			<li class="tab-contsitem is-f _show">
 				<div class="ly_inner is_small">
 					<ul class="tab-list">
-						<li class="tab-item is-a"><a href="#a">A-UNIT</a></li>
-						<!-- <li class="tab-item is-c"><a href="#c">C-UNIT</a></li> -->
+						<li class="tab-item is-b"><a href="#b">B-UNIT</a></li>
+						<li class="tab-item is-d"><a href="#d">D-UNIT</a></li>
 						<li class="tab-item is-f _active"><a href="#f">F-UNIT</a></li>
-						<li class="tab-item is-n"><a href="#n">N-UNIT</a></li>
 					</ul>
 				</div>
 				<section id="f" class="unit">
@@ -305,6 +472,8 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 
 				</div>
 			</li>
+			<?php
+			/*
 			<li class="tab-contsitem is-n _show">
 				<div class="ly_inner is_small">
 					<ul class="tab-list">
@@ -385,7 +554,8 @@ include_once ABSOLUTE_ROOT_DIR.'/snippet/header.php';
 					</section>
 
 				</div>
-			</li>
+			</li> */
+			?>
 		</ul>
 	</section><!-- /.tab -->
 
